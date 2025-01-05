@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbolyismhk2s7"]
+
+[ext_resource type="Theme" uid="uid://ehrmkdn2lpq0" path="res://gametheme.tres" id="1_456ao"]
+[ext_resource type="Script" path="res://scripts/game_menu.gd" id="2_upvj6"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_456ao")
+script = ExtResource("2_upvj6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.34902)
+
+[node name="Container" type="CenterContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Container"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextEdit" type="Label" parent="ColorRect/Container/VBoxContainer"]
+layout_mode = 2
+text = "pause menu"
+
+[node name="Button" type="Button" parent="ColorRect/Container/VBoxContainer"]
+layout_mode = 2
+text = "exit to main menu"
+
+[node name="Button2" type="Button" parent="ColorRect/Container/VBoxContainer"]
+layout_mode = 2
+text = "resume"
+
+[connection signal="pressed" from="ColorRect/Container/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

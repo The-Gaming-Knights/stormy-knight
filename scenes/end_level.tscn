@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://bka53vm5yms2p"]
+
+[ext_resource type="Theme" uid="uid://ehrmkdn2lpq0" path="res://gametheme.tres" id="1_k20m2"]
+[ext_resource type="Script" path="res://scripts/end _level_s_h.gd" id="2_ysnod"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_k20m2")
+script = ExtResource("2_ysnod")
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.380392)
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ColorRect/CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "level complete"
+
+[node name="Button" type="Button" parent="Control/ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "next level"
+
+[node name="Button2" type="Button" parent="Control/ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "exit to main menu"

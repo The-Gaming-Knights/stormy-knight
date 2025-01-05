@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgrc8uu6uxqje"]
+
+[ext_resource type="PackedScene" uid="uid://dbolyismhk2s7" path="res://scenes/in_game_menu.tscn" id="2_v55b4"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" parent="." instance=ExtResource("2_v55b4")]
