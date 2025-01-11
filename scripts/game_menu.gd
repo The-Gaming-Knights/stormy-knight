@@ -6,8 +6,10 @@ class_name PauseMenu extends Control
 
 @onready var center_cont := $ColorRect/Container as CenterContainer
 @onready var resume_button := $ColorRect/Container/VBoxContainer/Button2 as Button
+@onready var exit_button := $ColorRect/Container/VBoxContainer/Button as Button
 #@onready var coins_counter := $ColorRect/CoinsCounter as CoinsCounter
-
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/grass_platform.tscn")
 
 func _ready() -> void:
 	hide()

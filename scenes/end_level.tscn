@@ -39,10 +39,17 @@ layout_mode = 2
 layout_mode = 2
 text = "level complete"
 
-[node name="Button" type="Button" parent="Control/ColorRect/CenterContainer/VBoxContainer"]
+[node name="next level" type="Button" parent="Control/ColorRect/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "next level"
 
-[node name="Button2" type="Button" parent="Control/ColorRect/CenterContainer/VBoxContainer"]
+[node name="exit" type="Button" parent="Control/ColorRect/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "exit to main menu"
+
+[node name="restart" type="Button" parent="Control/ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "restart"
+
+[connection signal="pressed" from="Control/ColorRect/CenterContainer/VBoxContainer/next level" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/ColorRect/CenterContainer/VBoxContainer/restart" to="Control" method="_on_restart_pressed"]
