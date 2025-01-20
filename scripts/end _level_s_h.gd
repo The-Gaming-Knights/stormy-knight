@@ -1,6 +1,6 @@
 extends Control
 
-@onready var next_button := $ColorRect/CenterContainer/VBoxContainer/Button as Button
+@onready var next_button := $"ColorRect/CenterContainer/VBoxContainer/next level" as Button
 @onready var restart: Button = $ColorRect/CenterContainer/VBoxContainer/restart
 
 func _on_button_pressed() -> void:

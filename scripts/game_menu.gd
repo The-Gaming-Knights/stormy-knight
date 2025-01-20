@@ -1,4 +1,4 @@
-class_name PauseMenu extends Control
+class_name GameMenu extends Control
 
 
 @export var fade_in_duration := 0.3
