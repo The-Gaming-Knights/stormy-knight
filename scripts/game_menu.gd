@@ -9,57 +9,29 @@ class_name GameMenu extends Control
 @onready var exit_button := $ColorRect/Container/VBoxContainer/Button as Button
 #@onready var coins_counter := $ColorRect/CoinsCounter as CoinsCounter
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/grass_platform.tscn")
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://scenes/enter_game.tscn")
 
 func _ready() -> void:
 	hide()
 func _on_button_2_pressed() -> void:
 	close()
-
+func _on_restart_pressed() -> void:
+	Engine.time_scale = 1
+	get_tree().paused = false
+	get_tree().reload_current_scene()
 
 func close() -> void:
 	print("closing")
 	#var tween := create_tween()
 	hide()
 	get_tree().paused = false
-	#tween.tween_property(
-		#self,
-		#^"modulate:a",
-		#0.0,
-		#fade_out_duration
-	#).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_OUT)
-	#tween.parallel().tween_property(
-		#center_cont,
-		#^"anchor_bottom",
-		#0.5,
-		#fade_out_duration
-	#).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
-	#tween.tween_callback(hide)
-
 
 func open() -> void:
 	print("opening")
 	show()
 	resume_button.grab_focus()
-	#modulate.a = 0.0
-	#center_cont.anchor_bottom = 0.5
-
-	#var tween := create_tween()
-	#tween.tween_property(
-		#self,
-		#^"modulate:a",
-		#1.0,
-		#fade_in_duration
-	#).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN)
-	#tween.parallel().tween_property(
-		#center_cont,
-		#^"anchor_bottom",
-		#1.0,
-		#fade_out_duration
-	#).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
-
-
-
+	
 func _on_resume_button_pressed() -> void:
 	close()
 

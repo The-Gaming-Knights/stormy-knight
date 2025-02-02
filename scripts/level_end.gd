@@ -8,6 +8,7 @@ var complete = false
 
 func _on_body_entered(_body):
 	player.slow = false
+	player.hide()
 	complete = true
 	game.pause()
 	canvas_layer.show()

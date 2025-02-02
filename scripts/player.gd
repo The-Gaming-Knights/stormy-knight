@@ -7,6 +7,7 @@ var slow = false
 @onready var timer2: Timer = $Timer
 @onready var timer_2: Timer = $Timer2
 @onready var KILLZONE: Area2D = $"../killzone"
+@onready var area_2d: Area2D = $"../../Area2D"
 var movement = true
 
 func _physics_process(delta: float) -> void:
@@ -18,19 +19,19 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			
-	print(direction)
+	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-			velocity.y = JUMP_VELOCITY
+			velocity.y = JUMP_VELOCITY  
 	#if Input.is_action_just_pressed("jump") and is_on_wall_only():
-			#velocity.x = (direction * SPEED)*2
+			#velocity.x = (direction * SPEED)*2 
 			#if direction:
 				#velocity.y = JUMP_VELOCITY
 			#movement = false
 			#timer_2.start()
 			
-			
+	
 			
 	if slow == false:	
 		if Input.is_action_just_pressed("normal"):
@@ -58,7 +59,7 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 func _on_timer_timeout() -> void:
-		print("done")
+		
 		if KILLZONE.death == false:
 			slow = false
 			Engine.time_scale = 1

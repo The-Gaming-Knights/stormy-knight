@@ -4,11 +4,17 @@ extends Control
 @onready var restart: Button = $ColorRect/CenterContainer/VBoxContainer/restart
 
 func _on_button_pressed() -> void:
+	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scenes/grass_platform.tscn")
 	
-#func _on_restart_pressed() -> void:
-	#Engine.time_scale = 1
-	#get_tree().reload_current_scene()
+func _on_exit_pressed() -> void:
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://scenes/enter_game.tscn")
+	
+func _on_restart_pressed() -> void:
+	Engine.time_scale = 1
+	get_tree().paused = false
+	get_tree().reload_current_scene()
 
 func _ready() -> void:
 	hide()
