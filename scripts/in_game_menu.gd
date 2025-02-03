@@ -5,6 +5,9 @@ extends Node
 @onready var area_2d: Area2D = $Area2D
 @onready var player: CharacterBody2D = $level/Player
 
+func _ready() -> void:
+	get_tree().paused = false
+
 func pause():
 	get_tree().paused = not get_tree().paused
 

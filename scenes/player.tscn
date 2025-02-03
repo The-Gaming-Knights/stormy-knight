@@ -47,7 +47,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gdi28"]
-radius = 5.09902
+radius = 5.0
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 5
