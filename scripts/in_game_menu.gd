@@ -4,9 +4,10 @@ extends Node
 @onready var _pause_menu: Control = $CanvasLayer/Control
 @onready var area_2d: Area2D = $Area2D
 @onready var player: CharacterBody2D = $level/Player
-
+#@onready var music: AudioStreamPlayer = get_node("../musicforlevel("+str(Startgame.level)+")")
 func _ready() -> void:
 	get_tree().paused = false
+	#music.play()
 
 func pause():
 	get_tree().paused = not get_tree().paused
