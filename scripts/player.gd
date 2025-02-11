@@ -9,10 +9,16 @@ var slow = false
 @onready var KILLZONE: Area2D = $"../killzone"
 @onready var area_2d: Area2D = $"../../Area2D"
 var movement = true
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	var direction := Input.get_axis("left", "right")
+	if direction > 0:
+		animated_sprite.flip_h = false
+	elif direction < 0:
+		animated_sprite.flip_h = true
+	
 	if movement:
 		if direction:
 			velocity.x = direction * SPEED
