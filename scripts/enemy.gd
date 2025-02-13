@@ -18,4 +18,4 @@ func _process(delta: float) -> void:
 	position.x += direction * SPEED * delta
 	
 	if not ray_cast_down.is_colliding() :
-		position.y += 16 * delta * 4
+		position.y += 60 * delta
