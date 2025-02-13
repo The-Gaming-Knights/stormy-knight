@@ -628,10 +628,10 @@ autoplay = "platrorm elevator"
 position = Vector2(336, -156)
 
 [node name="grass platform5" parent="level" instance=ExtResource("7_7p23d")]
-position = Vector2(336, -234)
+position = Vector2(20, -143)
 
 [node name="enemy2" parent="level" instance=ExtResource("8_x2q6s")]
-position = Vector2(217, -236)
+position = Vector2(-143, -131)
 
 [node name="enemy3" parent="level" instance=ExtResource("8_x2q6s")]
 position = Vector2(-156, -172)
