@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://iqdnc8fufv4p"]
+[gd_scene load_steps=16 format=3 uid="uid://iqdnc8fufv4p"]
 
 [ext_resource type="Script" path="res://scripts/in_game_menu.gd" id="1_a524m"]
 [ext_resource type="Texture2D" uid="uid://dblr62mxfwmke" path="res://assets/sprites/world_tileset.png" id="2_rfnj3"]
@@ -6,8 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://b5td0npws5xs1" path="res://assets/sprites/templet lava.png" id="3_ppbvf"]
 [ext_resource type="PackedScene" uid="uid://chfdsp78x4a6e" path="res://scenes/killzone.tscn" id="4_l4o4o"]
 [ext_resource type="PackedScene" uid="uid://dr1at06rdiewt" path="res://scenes/player.tscn" id="5_g01sc"]
-[ext_resource type="PackedScene" uid="uid://bgknwtq0auo3y" path="res://scenes/grass_platform.tscn" id="6_efy6i"]
-[ext_resource type="PackedScene" uid="uid://hrd3k2hhydhh" path="res://scenes/enemy.tscn" id="7_ntxlw"]
 [ext_resource type="PackedScene" uid="uid://cgrc8uu6uxqje" path="res://scenes/pauseui.tscn" id="8_fl5j6"]
 [ext_resource type="PackedScene" uid="uid://bjibo8gjp6437" path="res://scenes/level_end.tscn" id="9_c20ty"]
 [ext_resource type="AudioStream" uid="uid://bt10gwpblwe2a" path="res://assets/music/musicforlevel(1).mp3" id="11_dpuy5"]
@@ -482,82 +480,6 @@ sources/0 = SubResource("TileSetAtlasSource_uc8ji")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ihawo"]
 
-[sub_resource type="Animation" id="Animation_af0en"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(123, -73)]
-}
-
-[sub_resource type="Animation" id="Animation_ffudc"]
-resource_name = "move platform up down"
-length = 2.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(144, -58), Vector2(144, -12)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_6l2t2"]
-_data = {
-"RESET": SubResource("Animation_af0en"),
-"move platform up down": SubResource("Animation_ffudc")
-}
-
-[sub_resource type="Animation" id="Animation_mlmnm"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(240, -127)]
-}
-
-[sub_resource type="Animation" id="Animation_sen2y"]
-resource_name = "platrorm elevator"
-length = 2.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(240, -127), Vector2(240, -60)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_7seh1"]
-_data = {
-"RESET": SubResource("Animation_mlmnm"),
-"platrorm elevator": SubResource("Animation_sen2y")
-}
-
 [node name="game" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_a524m")
@@ -591,43 +513,10 @@ zoom = Vector2(4, 4)
 limit_bottom = 57
 position_smoothing_enabled = true
 
-[node name="grass platform" parent="level" instance=ExtResource("6_efy6i")]
-position = Vector2(81, -53)
-
-[node name="grass platform2" parent="level" instance=ExtResource("6_efy6i")]
-position = Vector2(123, -73)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="level/grass platform2"]
-libraries = {
-"": SubResource("AnimationLibrary_6l2t2")
-}
-autoplay = "move platform up down"
-
-[node name="grass platform3" parent="level" instance=ExtResource("6_efy6i")]
-position = Vector2(240, -127)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="level/grass platform3"]
-libraries = {
-"": SubResource("AnimationLibrary_7seh1")
-}
-autoplay = "platrorm elevator"
-
-[node name="grass platform4" parent="level" instance=ExtResource("6_efy6i")]
-position = Vector2(336, -156)
-
-[node name="grass platform5" parent="level" instance=ExtResource("6_efy6i")]
-position = Vector2(336, -234)
-
-[node name="enemy2" parent="level" instance=ExtResource("7_ntxlw")]
-position = Vector2(217, -236)
-
-[node name="enemy3" parent="level" instance=ExtResource("7_ntxlw")]
-position = Vector2(-156, -172)
-
 [node name="CanvasLayer" parent="." instance=ExtResource("8_fl5j6")]
 
 [node name="Area2D" parent="." instance=ExtResource("9_c20ty")]
-position = Vector2(699, -64)
+position = Vector2(691, -64)
 
 [node name="musicforlevel(3)" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_dpuy5")

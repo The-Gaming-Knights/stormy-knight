@@ -1521,7 +1521,7 @@ autoplay = "tornado"
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="level/killzone/tornado"]
 sprite_frames = SubResource("SpriteFrames_wvdi5")
 autoplay = "default"
-frame_progress = 0.0540833
+frame_progress = 0.527269
 
 [node name="Player" parent="level" instance=ExtResource("1_ojxva")]
 position = Vector2(-10, -22)
