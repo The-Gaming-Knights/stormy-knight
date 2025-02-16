@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bka53vm5yms2p" path="res://scenes/end_level.tscn" id="1_6c3vg"]
 [ext_resource type="Script" path="res://scripts/level_end.gd" id="1_g6fno"]
-[ext_resource type="Texture2D" uid="uid://bl6v2bimf57a6" path="res://assets/sprites/templet 1casle.png" id="3_wyhm8"]
+[ext_resource type="Texture2D" uid="uid://bl6v2bimf57a6" path="res://assets/sprites/tileset/templet 1casle.png" id="3_wyhm8"]
 [ext_resource type="AudioStream" uid="uid://dqm6p55mvqbsd" path="res://assets/sounds/mixkit-futuristic-machine-starting-2689.mp3" id="4_dv46u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d6kps"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwrxsatlkj3in"
-path="res://.godot/imported/knight.png-7c67c83d34932624952797d9e971a644.ctex"
+uid="uid://b5td0npws5xs1"
+path="res://.godot/imported/templet lava.png-bb163b46e23a6a23d8ea09eea67a570d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/knight.png"
-dest_files=["res://.godot/imported/knight.png-7c67c83d34932624952797d9e971a644.ctex"]
+source_file="res://assets/sprites/tileset/templet lava.png"
+dest_files=["res://.godot/imported/templet lava.png-bb163b46e23a6a23d8ea09eea67a570d.ctex"]
 
 [params]
 

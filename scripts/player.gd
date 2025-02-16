@@ -21,13 +21,11 @@ func _physics_process(delta: float) -> void:
 		
 	if is_on_floor():
 		if direction == 0:
-			animated_sprite.play("idle")
+			animated_sprite.play("idle"+str(Startgame.skin))
 		else:
-			animated_sprite.play("run")
+			animated_sprite.play("run"+str(Startgame.skin))
 	else:
-		animated_sprite.play("jump_fall")
-	
-	
+		animated_sprite.play("jump_fall"+str(Startgame.skin))
 	
 	if movement:
 		if direction:
@@ -35,7 +33,6 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 			
-	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	if Input.is_action_just_pressed("jump") and is_on_floor():
@@ -59,11 +56,9 @@ func _physics_process(delta: float) -> void:
 			Engine.time_scale = 0.1
 			timer2.start()
 			slow = true
-		
-
+			
 	move_and_slide()
 func _on_timer_timeout() -> void:
-		
 		if KILLZONE.death == false:
 			slow = false
 			Engine.time_scale = 1

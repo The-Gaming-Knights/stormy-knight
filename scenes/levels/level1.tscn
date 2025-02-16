@@ -1,16 +1,16 @@
 [gd_scene load_steps=136 format=3 uid="uid://dsvstw8irb5uu"]
 
-[ext_resource type="Script" path="res://scripts/in_game_menu.gd" id="1_gmd15"]
-[ext_resource type="PackedScene" uid="uid://dr1at06rdiewt" path="res://scenes/player.tscn" id="1_ojxva"]
-[ext_resource type="Texture2D" uid="uid://dblr62mxfwmke" path="res://assets/sprites/world_tileset.png" id="1_s1p3y"]
-[ext_resource type="PackedScene" uid="uid://chfdsp78x4a6e" path="res://scenes/killzone.tscn" id="1_wifmy"]
-[ext_resource type="Texture2D" uid="uid://bl6v2bimf57a6" path="res://assets/sprites/templet 1casle.png" id="3_2uxyh"]
-[ext_resource type="PackedScene" uid="uid://cgrc8uu6uxqje" path="res://scenes/pauseui.tscn" id="6_5mh3n"]
-[ext_resource type="PackedScene" uid="uid://bjibo8gjp6437" path="res://scenes/level_end.tscn" id="8_w7ls8"]
-[ext_resource type="AudioStream" uid="uid://bt10gwpblwe2a" path="res://assets/music/musicforlevel(1).mp3" id="9_dspcy"]
+[ext_resource type="Script" path="res://scripts/in_game_menu.gd" id="1_6pxs3"]
+[ext_resource type="Texture2D" uid="uid://dblr62mxfwmke" path="res://assets/sprites/world_tileset.png" id="2_4vkep"]
+[ext_resource type="Texture2D" uid="uid://bl6v2bimf57a6" path="res://assets/sprites/tileset/templet 1casle.png" id="3_mk1tu"]
+[ext_resource type="PackedScene" uid="uid://chfdsp78x4a6e" path="res://scenes/killzone.tscn" id="4_o10l2"]
+[ext_resource type="PackedScene" uid="uid://dr1at06rdiewt" path="res://scenes/player.tscn" id="5_v8wkj"]
+[ext_resource type="PackedScene" uid="uid://cgrc8uu6uxqje" path="res://scenes/pauseui.tscn" id="6_nsopm"]
+[ext_resource type="PackedScene" uid="uid://bjibo8gjp6437" path="res://scenes/level_end.tscn" id="7_2y4nb"]
+[ext_resource type="AudioStream" uid="uid://bt10gwpblwe2a" path="res://assets/music/musicforlevel(1).mp3" id="8_643xx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2syx2"]
-texture = ExtResource("1_s1p3y")
+texture = ExtResource("2_4vkep")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -172,7 +172,7 @@ texture = ExtResource("1_s1p3y")
 2:4/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pppib"]
-texture = ExtResource("3_2uxyh")
+texture = ExtResource("3_mk1tu")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -371,7 +371,7 @@ sources/0 = SubResource("TileSetAtlasSource_2syx2")
 sources/1 = SubResource("TileSetAtlasSource_pppib")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kh7i5"]
-texture = ExtResource("1_s1p3y")
+texture = ExtResource("2_4vkep")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -501,7 +501,7 @@ texture = ExtResource("1_s1p3y")
 3:15/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ev08n"]
-texture = ExtResource("3_2uxyh")
+texture = ExtResource("3_mk1tu")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -626,6 +626,21 @@ sources/1 = SubResource("TileSetAtlasSource_ev08n")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hnkdx"]
 
+[sub_resource type="Animation" id="Animation_5ewoo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-152, -156)]
+}
+
 [sub_resource type="Animation" id="Animation_6026q"]
 resource_name = "tornado"
 length = 15.0
@@ -642,21 +657,6 @@ tracks/0/keys = {
 "values": [Vector2(-152, -156), Vector2(49, -156), Vector2(1664, -156)]
 }
 
-[sub_resource type="Animation" id="Animation_5ewoo"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-152, -156)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cyr6y"]
 _data = {
 "RESET": SubResource("Animation_5ewoo"),
@@ -664,463 +664,463 @@ _data = {
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j6l0u"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qnx4p"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w5okv"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(0, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hkjyo"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(0, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gf53l"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(16, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rycpb"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(16, 96, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0lkqy"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(16, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7j03n"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(16, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s4a5i"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(32, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_frq7o"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(48, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hxg6d"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(48, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dli1s"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(64, 96, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hc6sd"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(64, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nosyn"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(64, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r1m5n"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(48, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jy8e8"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(48, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x1aoy"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(32, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4s67p"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(16, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w7n6a"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(0, 96, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1aewc"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(32, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2h0jm"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(32, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6j8t6"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mv5ek"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(16, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_prfxa"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(0, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ql8rv"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(0, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7xvnd"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(16, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tlbf6"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bkx15"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(0, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p6sd4"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(32, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3hq44"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(32, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3qcgp"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(64, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_isdi8"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(32, 96, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fw54q"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(16, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_en286"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(32, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ckmd2"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(48, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vcote"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(64, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_83h4m"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(80, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m3ou2"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v4ege"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(48, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nppw6"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(0, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s7t8a"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(32, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6etwb"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(144, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2o8s4"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(144, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7wdx5"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(160, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ynofp"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(160, 96, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x5oby"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(160, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vt2c4"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(144, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uqg7s"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(112, 144, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pnspe"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(112, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u214g"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(112, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e0w8u"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(96, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k6f5x"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(96, 144, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2kl16"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(112, 96, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8amk0"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(80, 144, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hcufu"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(64, 160, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p17un"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(80, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_52fhu"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(80, 96, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jh05l"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(80, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_go44m"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(80, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hi5ny"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(80, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pfp73"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(64, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i3o4f"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(64, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8kwa6"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(64, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7enrb"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(64, 144, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ghrdg"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(48, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_alo5p"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(48, 96, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mw067"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(0, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_45321"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(16, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ni1lp"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qywoh"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(48, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_70vd0"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c3gc0"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(144, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6w8rf"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(128, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g8sy1"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(112, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vbms3"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(96, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xw805"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(160, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ya0d"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(176, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_30fn8"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(176, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1vcv6"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(160, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jq2fh"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(176, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7yg47"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(160, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ducvu"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(160, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_307si"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(176, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_byh2q"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(176, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m0w1k"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(160, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cdj5g"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(144, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7mpdd"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(144, 144, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_688tk"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(144, 96, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nwd0t"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(144, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aqq5q"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(144, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dle88"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(128, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wwywt"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(128, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n06k0"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(128, 96, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3pv12"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(128, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eqgna"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(144, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wyfk4"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(144, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j0bwd"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(160, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p8cu8"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(144, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bbhhv"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(128, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t3k07"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(128, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p7y8t"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(128, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hwtjm"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(112, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ascbi"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(112, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t7mqm"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(112, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4b4yt"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(112, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ic5w6"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(112, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2mjy8"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(96, 96, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5hp0e"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(96, 112, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e18sx"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(96, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qrph5"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(96, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jsycg"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(96, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pynkv"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(96, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q74lh"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(80, 128, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gxx2e"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(96, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_atj1d"]
-atlas = ExtResource("3_2uxyh")
+atlas = ExtResource("3_mk1tu")
 region = Rect2(80, 32, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wvdi5"]
@@ -1478,7 +1478,7 @@ animations = [{
 
 [node name="game" type="Node2D"]
 process_mode = 3
-script = ExtResource("1_gmd15")
+script = ExtResource("1_6pxs3")
 
 [node name="level" type="Node2D" parent="."]
 process_mode = 1
@@ -1500,7 +1500,7 @@ format = 2
 layer_0/modulate = Color(0.633757, 0.633757, 0.633757, 1)
 layer_0/tile_data = PackedInt32Array(-720893, 65537, 2, -655357, 65537, 2, -589821, 65537, 2, -524285, 65537, 2, -458749, 65537, 2, -393213, 65537, 2, -327677, 65537, 2, -262141, 65537, 2, -196605, 262145, 2, -131069, 262145, 2, -65533, 262145, 2, -720892, 65537, 2, -655356, 65537, 2, -589820, 65537, 2, -524284, 65537, 2, -458748, 65537, 2, -393212, 65537, 2, -327676, 65537, 2, -262140, 65537, 2, -196604, 65537, 2, -131068, 65537, 2, -65532, 65537, 2, -720891, 65537, 2, -655355, 65537, 2, -589819, 65537, 2, -524283, 65537, 2, -458747, 65537, 2, -393211, 65537, 2, -327675, 65537, 2, -262139, 65537, 2, -196603, 65537, 2, -131067, 65537, 2, -65531, 65537, 2, -720890, 65537, 2, -655354, 65537, 2, -589818, 65537, 2, -524282, 65537, 2, -458746, 65537, 2, -393210, 65537, 2, -327674, 65537, 2, -262138, 65537, 2, -196602, 65537, 2, -131066, 65537, 2, -65530, 65537, 2, -655353, 65537, 2, -589817, 65537, 2, -720889, 65537, 2, -524281, 65537, 2, -458745, 65537, 2, -393209, 65537, 2, -327673, 65537, 2, -262137, 65537, 2, -196601, 65537, 2, -131065, 65537, 2, -65529, 65537, 2, -458744, 65537, 2, -458743, 65537, 2, -524280, 65537, 2, -393208, 65537, 2, -327672, 65537, 2, -262136, 65537, 2, -196600, 65537, 2, -131064, 65537, 2, -65528, 65537, 2, -524279, 65537, 2, -393207, 65537, 2, -327671, 65537, 2, -262135, 65537, 2, -196599, 65537, 2, -131063, 65537, 2, -65527, 65537, 2, -524278, 65537, 2, -458742, 65537, 2, -393206, 65537, 2, -327670, 65537, 2, -262134, 65537, 2, -196598, 65537, 2, -131062, 65537, 2, -65526, 65537, 2, -524277, 65537, 2, -458741, 65537, 2, -393205, 65537, 2, -327669, 65537, 2, -262133, 65537, 2, -196597, 65537, 2, -131061, 65537, 2, -65525, 65537, 2, -524276, 65537, 2, -458740, 65537, 2, -393204, 65537, 2, -327668, 65537, 2, -262132, 65537, 2, -196596, 65537, 2, -131060, 65537, 2, -65524, 65537, 2, -524275, 65537, 2, -458739, 65537, 2, -393203, 65537, 2, -327667, 65537, 2, -262131, 65537, 2, -196595, 65537, 2, -131059, 65537, 2, -65523, 65537, 2, -524274, 65537, 2, -458738, 65537, 2, -393202, 65537, 2, -327666, 65537, 2, -262130, 65537, 2, -196594, 65537, 2, -131058, 65537, 2, -65522, 65537, 2, -524273, 65537, 2, -458737, 65537, 2, -393201, 65537, 2, -327665, 65537, 2, -262129, 65537, 2, -196593, 65537, 2, -131057, 65537, 2, -65521, 65537, 2, -524272, 65537, 2, -458736, 65537, 2, -393200, 65537, 2, -327664, 65537, 2, -262128, 65537, 2, -196592, 65537, 2, -131056, 65537, 2, -65520, 65537, 2, -524271, 65537, 2, -458735, 65537, 2, -393199, 65537, 2, -327663, 65537, 2, -262127, 65537, 2, -196591, 65537, 2, -131055, 65537, 2, -65519, 65537, 2, -524270, 65537, 2, -458734, 65537, 2, -393198, 65537, 2, -327662, 65537, 2, -262126, 65537, 2, -196590, 65537, 2, -131054, 65537, 2, -65518, 65537, 2, -524269, 65537, 2, -458733, 65537, 2, -393197, 65537, 2, -327661, 65537, 2, -262125, 65537, 2, -196589, 65537, 2, -131053, 65537, 2, -65517, 65537, 2, -524268, 65537, 2, -458732, 65537, 2, -393196, 65537, 2, -327660, 65537, 2, -262124, 65537, 2, -196588, 65537, 2, -131052, 65537, 2, -65516, 65537, 2, -524267, 65537, 2, -458731, 65537, 2, -393195, 65537, 2, -327659, 65537, 2, -262123, 65537, 2, -196587, 65537, 2, -131051, 65537, 2, -65515, 65537, 2, -524266, 65537, 2, -458730, 65537, 2, -393194, 65537, 2, -327658, 65537, 2, -262122, 65537, 2, -196586, 65537, 2, -131050, 65537, 2, -65514, 65537, 2, -524265, 65537, 2, -458729, 65537, 2, -393193, 65537, 2, -327657, 65537, 2, -262121, 65537, 2, -196585, 65537, 2, -131049, 65537, 2, -65513, 65537, 2, -524264, 65537, 2, -458728, 65537, 2, -393192, 65537, 2, -327656, 65537, 2, -262120, 65537, 2, -196584, 65537, 2, -131048, 65537, 2, -65512, 65537, 2, -524263, 65537, 2, -458727, 65537, 2, -393191, 65537, 2, -327655, 65537, 2, -262119, 65537, 2, -196583, 65537, 2, -131047, 65537, 2, -65511, 65537, 2, -524262, 65537, 2, -458726, 65537, 2, -393190, 65537, 2, -327654, 65537, 2, -262118, 65537, 2, -196582, 65537, 2, -131046, 65537, 2, -65510, 65537, 2, -524261, 65537, 2, -458725, 65537, 2, -393189, 65537, 2, -327653, 65537, 2, -262117, 65537, 2, -196581, 65537, 2, -131045, 65537, 2, -65509, 65537, 2, -524260, 65537, 2, -458724, 65537, 2, -393188, 65537, 2, -327652, 65537, 2, -262116, 65537, 2, -196580, 65537, 2, -131044, 65537, 2, -65508, 65537, 2, -524259, 65537, 2, -458723, 65537, 2, -393187, 65537, 2, -327651, 65537, 2, -262115, 65537, 2, -196579, 65537, 2, -131043, 65537, 2, -65507, 65537, 2, -524258, 65537, 2, -458722, 65537, 2, -393186, 65537, 2, -327650, 65537, 2, -262114, 65537, 2, -196578, 65537, 2, -131042, 65537, 2, -65506, 65537, 2, -524257, 65537, 2, -458721, 65537, 2, -393185, 65537, 2, -327649, 65537, 2, -262113, 65537, 2, -196577, 65537, 2, -131041, 65537, 2, -65505, 65537, 2, -524256, 65537, 2, -458720, 65537, 2, -393184, 65537, 2, -327648, 65537, 2, -262112, 65537, 2, -196576, 65537, 2, -131040, 65537, 2, -65504, 65537, 2, -524255, 65537, 2, -458719, 65537, 2, -393183, 65537, 2, -327647, 65537, 2, -262111, 65537, 2, -196575, 65537, 2, -131039, 65537, 2, -65503, 65537, 2, -524254, 65537, 2, -458718, 65537, 2, -393182, 65537, 2, -327646, 65537, 2, -262110, 65537, 2, -196574, 65537, 2, -131038, 65537, 2, -65502, 65537, 2, -589816, 524289, 2, -589815, 524289, 2, -589814, 524289, 2, -589813, 524289, 2, -589812, 524289, 2, -589811, 524289, 2, -589810, 524289, 2, -589809, 524289, 2, -589808, 524289, 2, -589807, 524289, 2, -589806, 524289, 2, -589805, 524289, 2, -589804, 524289, 2, -589803, 524289, 2, -589802, 524289, 2, -589801, 524289, 2, -589800, 524289, 2, -589799, 524289, 2, -589798, 524289, 2, -589797, 524289, 2, -589796, 524289, 2, -589795, 524289, 2, -589794, 524289, 2, -589793, 524289, 2, -589792, 524289, 2, -589791, 524289, 2, -589790, 524289, 2, -524253, 65537, 2, -458717, 65537, 2, -393181, 65537, 2, -327645, 65537, 2, -262109, 65537, 2, -196573, 65537, 2, -131037, 65537, 2, -65501, 65537, 2, -524252, 65537, 2, -458716, 65537, 2, -393180, 65537, 2, -327644, 65537, 2, -262108, 65537, 2, -196572, 65537, 2, -131036, 65537, 2, -65500, 65537, 2, -524251, 65537, 2, -458715, 65537, 2, -393179, 65537, 2, -327643, 65537, 2, -262107, 65537, 2, -196571, 65537, 2, -131035, 65537, 2, -65499, 65537, 2, -524250, 65537, 2, -458714, 65537, 2, -393178, 65537, 2, -327642, 65537, 2, -262106, 65537, 2, -196570, 65537, 2, -131034, 65537, 2, -65498, 65537, 2, -524249, 65537, 2, -458713, 65537, 2, -393177, 65537, 2, -327641, 65537, 2, -262105, 65537, 2, -196569, 65537, 2, -131033, 65537, 2, -65497, 65537, 2, -524248, 65537, 2, -458712, 65537, 2, -393176, 65537, 2, -327640, 65537, 2, -262104, 65537, 2, -196568, 65537, 2, -131032, 65537, 2, -65496, 65537, 2, -524247, 65537, 2, -458711, 65537, 2, -393175, 65537, 2, -327639, 65537, 2, -262103, 65537, 2, -196567, 65537, 2, -131031, 65537, 2, -65495, 65537, 2, -524246, 65537, 2, -458710, 65537, 2, -393174, 65537, 2, -327638, 65537, 2, -262102, 65537, 2, -196566, 65537, 2, -131030, 65537, 2, -65494, 65537, 2, -524245, 65537, 2, -458709, 65537, 2, -393173, 65537, 2, -327637, 65537, 2, -262101, 65537, 2, -196565, 65537, 2, -131029, 65537, 2, -65493, 65537, 2, -524244, 65537, 2, -458708, 65537, 2, -393172, 65537, 2, -327636, 65537, 2, -262100, 65537, 2, -196564, 65537, 2, -131028, 65537, 2, -65492, 65537, 2, -524243, 65537, 2, -458707, 65537, 2, -393171, 65537, 2, -327635, 65537, 2, -262099, 65537, 2, -196563, 65537, 2, -131027, 65537, 2, -65491, 65537, 2, -524242, 65537, 2, -458706, 65537, 2, -393170, 65537, 2, -327634, 65537, 2, -262098, 65537, 2, -196562, 65537, 2, -131026, 65537, 2, -65490, 65537, 2, -524241, 65537, 2, -458705, 65537, 2, -393169, 65537, 2, -327633, 65537, 2, -262097, 65537, 2, -196561, 65537, 2, -131025, 65537, 2, -65489, 65537, 2, -524240, 65537, 2, -458704, 65537, 2, -393168, 65537, 2, -327632, 65537, 2, -262096, 65537, 2, -196560, 65537, 2, -131024, 65537, 2, -65488, 65537, 2, -524239, 65537, 2, -458703, 65537, 2, -393167, 65537, 2, -327631, 65537, 2, -262095, 65537, 2, -196559, 65537, 2, -131023, 65537, 2, -65487, 65537, 2, -524238, 65537, 2, -458702, 65537, 2, -393166, 65537, 2, -327630, 65537, 2, -262094, 65537, 2, -196558, 65537, 2, -131022, 65537, 2, -65486, 65537, 2, -524237, 65537, 2, -458701, 65537, 2, -393165, 65537, 2, -327629, 65537, 2, -262093, 65537, 2, -196557, 65537, 2, -131021, 65537, 2, -65485, 65537, 2, -524236, 65537, 2, -458700, 65537, 2, -393164, 65537, 2, -327628, 65537, 2, -262092, 65537, 2, -196556, 65537, 2, -131020, 65537, 2, -65484, 65537, 2, -524235, 65537, 2, -458699, 65537, 2, -393163, 65537, 2, -327627, 65537, 2, -262091, 65537, 2, -196555, 65537, 2, -131019, 65537, 2, -65483, 65537, 2, -524234, 65537, 2, -458698, 65537, 2, -393162, 65537, 2, -327626, 65537, 2, -262090, 65537, 2, -196554, 65537, 2, -131018, 65537, 2, -65482, 65537, 2, -524233, 65537, 2, -458697, 65537, 2, -393161, 65537, 2, -327625, 65537, 2, -262089, 65537, 2, -196553, 65537, 2, -131017, 65537, 2, -65481, 65537, 2, -524232, 65537, 2, -458696, 65537, 2, -393160, 65537, 2, -327624, 65537, 2, -262088, 65537, 2, -196552, 65537, 2, -131016, 65537, 2, -65480, 65537, 2, -524231, 65537, 2, -458695, 65537, 2, -393159, 65537, 2, -327623, 65537, 2, -262087, 65537, 2, -196551, 65537, 2, -131015, 65537, 2, -65479, 65537, 2, -524230, 65537, 2, -458694, 65537, 2, -393158, 65537, 2, -327622, 65537, 2, -262086, 65537, 2, -196550, 65537, 2, -131014, 65537, 2, -65478, 65537, 2, -524229, 65537, 2, -458693, 65537, 2, -393157, 65537, 2, -327621, 65537, 2, -262085, 65537, 2, -196549, 65537, 2, -131013, 65537, 2, -65477, 65537, 2, -524228, 65537, 2, -458692, 65537, 2, -393156, 65537, 2, -327620, 65537, 2, -262084, 65537, 2, -196548, 65537, 2, -131012, 65537, 2, -65476, 65537, 2, -524227, 65537, 2, -458691, 65537, 2, -393155, 65537, 2, -327619, 65537, 2, -262083, 65537, 2, -196547, 65537, 2, -131011, 65537, 2, -65475, 65537, 2, -524226, 65537, 2, -458690, 65537, 2, -393154, 65537, 2, -327618, 65537, 2, -262082, 65537, 2, -196546, 65537, 2, -131010, 65537, 2, -65474, 65537, 2, -524225, 65537, 2, -458689, 65537, 2, -393153, 65537, 2, -327617, 65537, 2, -262081, 65537, 2, -196545, 65537, 2, -131009, 65537, 2, -65473, 65537, 2, -524224, 65537, 2, -458688, 65537, 2, -393152, 65537, 2, -327616, 65537, 2, -262080, 65537, 2, -196544, 65537, 2, -131008, 65537, 2, -65472, 65537, 2, -524223, 65537, 2, -458687, 65537, 2, -393151, 65537, 2, -327615, 65537, 2, -262079, 65537, 2, -196543, 65537, 2, -131007, 65537, 2, -65471, 65537, 2, -524222, 65537, 2, -458686, 65537, 2, -393150, 65537, 2, -327614, 65537, 2, -262078, 65537, 2, -196542, 65537, 2, -131006, 65537, 2, -65470, 65537, 2, -524221, 65537, 2, -458685, 65537, 2, -393149, 65537, 2, -327613, 65537, 2, -262077, 65537, 2, -196541, 65537, 2, -131005, 65537, 2, -65469, 65537, 2, -524220, 65537, 2, -458684, 65537, 2, -393148, 65537, 2, -327612, 65537, 2, -262076, 65537, 2, -196540, 65537, 2, -131004, 65537, 2, -65468, 65537, 2, -524219, 65537, 2, -458683, 65537, 2, -393147, 65537, 2, -327611, 65537, 2, -262075, 65537, 2, -196539, 65537, 2, -131003, 65537, 2, -65467, 65537, 2, -524218, 65537, 2, -458682, 65537, 2, -393146, 65537, 2, -327610, 65537, 2, -262074, 65537, 2, -196538, 65537, 2, -131002, 65537, 2, -65466, 65537, 2, -524217, 65537, 2, -458681, 65537, 2, -393145, 65537, 2, -327609, 65537, 2, -262073, 65537, 2, -196537, 65537, 2, -131001, 65537, 2, -65465, 65537, 2, -589789, 524289, 2, -589788, 524289, 2, -589787, 524289, 2, -589786, 524289, 2, -589785, 524289, 2, -589784, 524289, 2, -589783, 524289, 2, -589782, 524289, 2, -589781, 524289, 2, -589780, 524289, 2, -589779, 524289, 2, -589778, 524289, 2, -589777, 524289, 2, -589776, 524289, 2, -589775, 524289, 2, -589774, 524289, 2, -589773, 524289, 2, -589772, 524289, 2, -589771, 524289, 2, -589770, 524289, 2, -589769, 524289, 2, -589768, 524289, 2, -589767, 524289, 2, -589766, 524289, 2, -589765, 524289, 2, -589764, 524289, 2, -589763, 524289, 2, -589762, 524289, 2, -589761, 524289, 2, -589760, 524289, 2, -589759, 524289, 2, -589758, 524289, 2, -589757, 524289, 2, -589756, 524289, 2, -589755, 524289, 2, -589754, 524289, 2, -589753, 524289, 2, -589752, 524289, 2, -524216, 65537, 2, -458680, 65537, 2, -393144, 65537, 2, -327608, 65537, 2, -262072, 65537, 2, -196536, 65537, 2, -131000, 65537, 2, -65464, 65537, 2, -589751, 524289, 2, -524215, 65537, 2, -458679, 65537, 2, -393143, 65537, 2, -327607, 65537, 2, -262071, 65537, 2, -196535, 65537, 2, -130999, 65537, 2, -65463, 65537, 2, -589750, 524289, 2, -524214, 65537, 2, -458678, 65537, 2, -393142, 65537, 2, -327606, 65537, 2, -262070, 65537, 2, -196534, 65537, 2, -130998, 65537, 2, -65462, 65537, 2, -589749, 524289, 2, -524213, 65537, 2, -458677, 65537, 2, -393141, 65537, 2, -327605, 65537, 2, -262069, 65537, 2, -196533, 65537, 2, -130997, 65537, 2, -65461, 65537, 2, -589748, 524289, 2, -524212, 65537, 2, -458676, 65537, 2, -393140, 65537, 2, -327604, 65537, 2, -262068, 65537, 2, -196532, 65537, 2, -130996, 65537, 2, -65460, 65537, 2, -589747, 524289, 2, -524211, 65537, 2, -458675, 65537, 2, -393139, 65537, 2, -327603, 65537, 2, -262067, 65537, 2, -196531, 65537, 2, -130995, 65537, 2, -65459, 65537, 2, -589746, 524289, 2, -524210, 65537, 2, -458674, 65537, 2, -393138, 65537, 2, -327602, 65537, 2, -262066, 65537, 2, -196530, 65537, 2, -130994, 65537, 2, -65458, 65537, 2, -589745, 524289, 2, -524209, 65537, 2, -458673, 65537, 2, -393137, 65537, 2, -327601, 65537, 2, -262065, 65537, 2, -196529, 65537, 2, -130993, 65537, 2, -65457, 65537, 2, -589744, 524289, 2, -524208, 65537, 2, -458672, 65537, 2, -393136, 65537, 2, -327600, 65537, 2, -262064, 65537, 2, -196528, 65537, 2, -130992, 65537, 2, -65456, 65537, 2, -589743, 524289, 2, -524207, 65537, 2, -458671, 65537, 2, -393135, 65537, 2, -327599, 65537, 2, -262063, 65537, 2, -196527, 65537, 2, -130991, 65537, 2, -65455, 65537, 2, -589742, 524289, 2, -524206, 65537, 2, -458670, 65537, 2, -393134, 65537, 2, -327598, 65537, 2, -262062, 65537, 2, -196526, 65537, 2, -130990, 65537, 2, -65454, 65537, 2, -589741, 524289, 2, -524205, 65537, 2, -458669, 65537, 2, -393133, 65537, 2, -327597, 65537, 2, -262061, 65537, 2, -196525, 65537, 2, -130989, 65537, 2, -65453, 65537, 2, -589740, 524289, 2, -524204, 65537, 2, -458668, 65537, 2, -393132, 65537, 2, -327596, 65537, 2, -262060, 65537, 2, -196524, 65537, 2, -130988, 65537, 2, -65452, 65537, 2, -589739, 524289, 2, -524203, 65537, 2, -458667, 65537, 2, -393131, 65537, 2, -327595, 65537, 2, -262059, 65537, 2, -196523, 65537, 2, -130987, 65537, 2, -65451, 65537, 2, -589738, 524289, 2, -524202, 65537, 2, -458666, 65537, 2, -393130, 65537, 2, -327594, 65537, 2, -262058, 65537, 2, -196522, 65537, 2, -130986, 65537, 2, -65450, 65537, 2, -589737, 524289, 2, -524201, 65537, 2, -458665, 65537, 2, -393129, 65537, 2, -327593, 65537, 2, -262057, 65537, 2, -196521, 65537, 2, -130985, 65537, 2, -65449, 65537, 2, -589736, 524289, 2, -524200, 65537, 2, -458664, 65537, 2, -393128, 65537, 2, -327592, 65537, 2, -262056, 65537, 2, -196520, 65537, 2, -130984, 65537, 2, -65448, 65537, 2, -589735, 524289, 2, -524199, 65537, 2, -458663, 65537, 2, -393127, 65537, 2, -327591, 65537, 2, -262055, 65537, 2, -196519, 65537, 2, -130983, 65537, 2, -65447, 65537, 2, -589734, 524289, 2, -524198, 65537, 2, -458662, 65537, 2, -393126, 65537, 2, -327590, 65537, 2, -262054, 65537, 2, -196518, 65537, 2, -130982, 65537, 2, -65446, 65537, 2, -589733, 524289, 2, -524197, 65537, 2, -458661, 65537, 2, -393125, 65537, 2, -327589, 65537, 2, -262053, 65537, 2, -196517, 65537, 2, -130981, 65537, 2, -65445, 65537, 2, -589732, 524289, 2, -524196, 65537, 2, -458660, 65537, 2, -393124, 65537, 2, -327588, 65537, 2, -262052, 65537, 2, -196516, 65537, 2, -130980, 65537, 2, -65444, 65537, 2, -589731, 524289, 2, -524195, 65537, 2, -458659, 65537, 2, -393123, 65537, 2, -327587, 65537, 2, -262051, 65537, 2, -196515, 65537, 2, -130979, 65537, 2, -65443, 65537, 2, -589730, 524289, 2, -524194, 65537, 2, -458658, 65537, 2, -393122, 65537, 2, -327586, 65537, 2, -262050, 65537, 2, -196514, 65537, 2, -130978, 65537, 2, -65442, 65537, 2, -589729, 524289, 2, -524193, 65537, 2, -458657, 65537, 2, -393121, 65537, 2, -327585, 65537, 2, -262049, 65537, 2, -196513, 65537, 2, -130977, 65537, 2, -65441, 65537, 2, -589728, 524289, 2, -524192, 65537, 2, -458656, 65537, 2, -393120, 65537, 2, -327584, 65537, 2, -262048, 65537, 2, -196512, 65537, 2, -130976, 65537, 2, -65440, 65537, 2, -589727, 524289, 2, -524191, 65537, 2, -458655, 65537, 2, -393119, 65537, 2, -327583, 65537, 2, -262047, 65537, 2, -196511, 65537, 2, -130975, 65537, 2, -65439, 65537, 2, -589726, 524289, 2, -524190, 65537, 2, -458654, 65537, 2, -393118, 65537, 2, -327582, 65537, 2, -262046, 65537, 2, -196510, 65537, 2, -130974, 65537, 2, -65438, 65537, 2, -589725, 524289, 2, -524189, 65537, 2, -458653, 65537, 2, -393117, 65537, 2, -327581, 65537, 2, -262045, 65537, 2, -196509, 65537, 2, -130973, 65537, 2, -65437, 65537, 2, -720796, 65537, 2, -655260, 65537, 2, -589724, 65537, 2, -524188, 65537, 2, -458652, 65537, 2, -393116, 65537, 2, -327580, 65537, 2, -262044, 65537, 2, -196508, 65537, 2, -130972, 65537, 2, -65436, 65537, 2, -655259, 65537, 2, -589723, 65537, 2, -524187, 65537, 2, -458651, 65537, 2, -393115, 65537, 2, -327579, 65537, 2, -262043, 65537, 2, -196507, 65537, 2, -130971, 65537, 2, -65435, 65537, 2, -655258, 65537, 2, -589722, 65537, 2, -524186, 65537, 2, -458650, 65537, 2, -393114, 65537, 2, -327578, 65537, 2, -262042, 65537, 2, -196506, 65537, 2, -130970, 65537, 2, -65434, 65537, 2, -655257, 65537, 2, -589721, 65537, 2, -524185, 65537, 2, -458649, 65537, 2, -393113, 65537, 2, -327577, 65537, 2, -262041, 65537, 2, -196505, 65537, 2, -130969, 65537, 2, -65433, 65537, 2, -655256, 65537, 2, -589720, 65537, 2, -524184, 65537, 2, -458648, 65537, 2, -393112, 65537, 2, -327576, 65537, 2, -262040, 65537, 2, -196504, 65537, 2, -130968, 65537, 2, -65432, 65537, 2, -720792, 65537, 2, -720795, 65537, 2, -720794, 65537, 2, -720793, 65537, 2, -262039, 65537, 2, -196503, 65537, 2, -130967, 65537, 2, -65431, 65537, 2, -262038, 65537, 2, -196502, 65537, 2, -130966, 65537, 2, -65430, 65537, 2, -262037, 65537, 2, -196501, 65537, 2, -130965, 65537, 2, -65429, 65537, 2, -262036, 65537, 2, -196500, 65537, 2, -130964, 65537, 2, -65428, 65537, 2, -262035, 65537, 2, -196499, 65537, 2, -130963, 65537, 2, -65427, 65537, 2, -262034, 65537, 2, -196498, 65537, 2, -130962, 65537, 2, -65426, 65537, 2, -262033, 65537, 2, -196497, 65537, 2, -130961, 65537, 2, -65425, 65537, 2, -262032, 65537, 2, -196496, 65537, 2, -130960, 65537, 2, -65424, 65537, 2, -262031, 65537, 2, -196495, 65537, 2, -130959, 65537, 2, -65423, 65537, 2, -327575, 65537, 1, -327574, 65537, 1, -327573, 65537, 1, -327572, 65537, 1, -327571, 65537, 1, -327570, 65537, 1, -327569, 65537, 1, -327568, 65537, 1, -327567, 65537, 1, -327566, 327681, 1, -262030, 327681, 2, -196494, 327681, 2, -130958, 327681, 2, -65422, 327681, 2, -786329, 65537, 2, -786328, 65537, 2, -786332, 65537, 2, -786331, 65537, 2, -786330, 65537, 2)
 
-[node name="killzone" parent="level" instance=ExtResource("1_wifmy")]
+[node name="killzone" parent="level" instance=ExtResource("4_o10l2")]
 position = Vector2(0, 71)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level/killzone"]
@@ -1523,7 +1523,7 @@ sprite_frames = SubResource("SpriteFrames_wvdi5")
 autoplay = "default"
 frame_progress = 0.527269
 
-[node name="Player" parent="level" instance=ExtResource("1_ojxva")]
+[node name="Player" parent="level" instance=ExtResource("5_v8wkj")]
 position = Vector2(-10, -22)
 
 [node name="Camera2D" type="Camera2D" parent="level/Player"]
@@ -1532,12 +1532,12 @@ zoom = Vector2(4, 4)
 limit_bottom = 57
 position_smoothing_enabled = true
 
-[node name="CanvasLayer" parent="." instance=ExtResource("6_5mh3n")]
+[node name="CanvasLayer" parent="." instance=ExtResource("6_nsopm")]
 
-[node name="Area2D" parent="." instance=ExtResource("8_w7ls8")]
+[node name="Area2D" parent="." instance=ExtResource("7_2y4nb")]
 position = Vector2(1762, 0)
 
 [node name="musicforlevel(1)" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9_dspcy")
+stream = ExtResource("8_643xx")
 autoplay = true
 bus = &"music"

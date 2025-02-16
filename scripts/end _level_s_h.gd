@@ -9,7 +9,7 @@ func _ready() -> void:
 
 func _on_button_pressed() -> void:
 	Startgame.level += 1
-	get_tree().change_scene_to_file("res://scenes/level"+str(Startgame.level)+".tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/level"+str(Startgame.level)+".tscn")
 	print("buttone",Startgame.level)
 	
 func _on_exit_pressed() -> void:

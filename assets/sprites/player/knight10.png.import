@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwvp14u3l0ue6"
-path="res://.godot/imported/templet 1ice.png-f16f928804007629d874abd6d298dac5.ctex"
+uid="uid://bvgkduntjgu5y"
+path="res://.godot/imported/knight10.png-f97b1dd3aa4af1640ddc5358416c2007.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/templet 1ice.png"
-dest_files=["res://.godot/imported/templet 1ice.png-f16f928804007629d874abd6d298dac5.ctex"]
+source_file="res://assets/sprites/player/knight10.png"
+dest_files=["res://.godot/imported/knight10.png-f97b1dd3aa4af1640ddc5358416c2007.ctex"]
 
 [params]
 
