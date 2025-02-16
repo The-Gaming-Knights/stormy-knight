@@ -7,6 +7,7 @@ extends Node
 #@onready var music: AudioStreamPlayer = get_node("../musicforlevel("+str(Startgame.level)+")")
 func _ready() -> void:
 	get_tree().paused = false
+	Engine.time_scale = 1
 	#music.play()
 
 func pause():
