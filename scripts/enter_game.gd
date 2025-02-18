@@ -17,7 +17,7 @@ func _on_exit_pressed() -> void:
 	get_tree().quit()
 
 func _ready() -> void:
-	player.texture= ImageTexture.create_from_image(Image.load_from_file("res://assets/sprites/player/knight"+str(Startgame.skin)+".png"))
+	player.texture= ImageTexture.create_from_image(Image.load_from_file("res://assets/sprites/select/select"+str(Startgame.skin)+".png"))
 
 	
 func _process(delta: float) -> void:
@@ -28,11 +28,11 @@ func _on_prev_pressed() -> void:
 		Startgame.skin -= 1
 	elif Startgame.skin == 1:
 		Startgame.skin = 13
-	player.texture= ImageTexture.create_from_image(Image.load_from_file("res://assets/sprites/player/knight"+str(Startgame.skin)+".png"))
+	player.texture= ImageTexture.create_from_image(Image.load_from_file("res://assets/sprites/select/select"+str(Startgame.skin)+".png"))
 
 func _on_next_pressed() -> void:
 	if Startgame.skin < 13:
 		Startgame.skin += 1
 	elif Startgame.skin == 13:
 		Startgame.skin = 1
-	player.texture= ImageTexture.create_from_image(Image.load_from_file("res://assets/sprites/player/knight"+str(Startgame.skin)+".png"))
+	player.texture= ImageTexture.create_from_image(Image.load_from_file("res://assets/sprites/select/select"+str(Startgame.skin)+".png"))
