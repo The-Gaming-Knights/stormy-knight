@@ -12,7 +12,10 @@ var movement = true
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	if Input.is_action_just_pressed("restart"):
+		Engine.time_scale = 1
+		get_tree().reload_current_scene()
+			
 	var direction := Input.get_axis("left", "right")
 	if direction > 0:
 		animated_sprite.flip_h = false
