@@ -8,7 +8,11 @@ extends Control
 func _on_play_pressed() -> void:
 	Engine.time_scale = 1
 	get_tree().change_scene_to_file("res://scenes/levels/level"+str(Startgame.level)+".tscn")
-# Called when the node enters the scene tree for the first time.
+	
+func _on_restart_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/levels/level1.tscn")
+	Startgame.level = 1
+
 func _on_exit_pressed() -> void:
 	get_tree().quit()
 

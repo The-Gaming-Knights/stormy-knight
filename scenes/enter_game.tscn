@@ -56,6 +56,10 @@ layout_mode = 2
 text = "Play
 "
 
+[node name="restart" type="Button" parent="ColorRect/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "restart"
+
 [node name="Exit" type="Button" parent="ColorRect/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Exit
@@ -91,6 +95,7 @@ theme_override_font_sizes/font_size = 50
 text = ">"
 
 [connection signal="pressed" from="ColorRect/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="ColorRect/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="ColorRect/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="ColorRect/CenterContainer/HBoxContainer/ColorRect/HBoxContainer/prev" to="." method="_on_prev_pressed"]
 [connection signal="pressed" from="ColorRect/CenterContainer/HBoxContainer/ColorRect/HBoxContainer/next" to="." method="_on_next_pressed"]
