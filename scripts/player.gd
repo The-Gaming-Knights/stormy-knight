@@ -10,8 +10,12 @@ var slow = false
 @onready var area_2d: Area2D = $"../../Area2D"
 var movement = true
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+var dead = false
 
 func _physics_process(delta: float) -> void:
+	if KILLZONE.death == true and dead == false:
+		dead = true
+		velocity.y = -200
 	if Input.is_action_just_pressed("restart"):
 		Engine.time_scale = 1
 		get_tree().reload_current_scene()
@@ -41,7 +45,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 			velocity.y = JUMP_VELOCITY  
 
-	if slow == false:	
+	if slow == false and KILLZONE.death == false:	
 		if Input.is_action_just_pressed("normal"):
 			Engine.time_scale = 1
 			
@@ -61,6 +65,7 @@ func _physics_process(delta: float) -> void:
 			slow = true
 			
 	move_and_slide()
+	
 func _on_timer_timeout() -> void:
 		if KILLZONE.death == false:
 			slow = false
