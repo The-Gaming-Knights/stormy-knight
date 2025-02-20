@@ -10,6 +10,9 @@ class_name GameMenu extends Control
 #@onready var coins_counter := $ColorRect/CoinsCounter as CoinsCounter
 func _on_button_pressed() -> void:
 	get_tree().paused = false
+	if Startgame.cheese_colected == true:
+		Startgame.cheese -= 1
+		Startgame.cheese_colected = false
 	get_tree().change_scene_to_file("res://scenes/enter_game.tscn")
 
 func _ready() -> void:
@@ -20,6 +23,9 @@ func _on_restart_pressed() -> void:
 	Engine.time_scale = 1
 	get_tree().paused = false
 	get_tree().reload_current_scene()
+	if Startgame.cheese_colected == true:
+		Startgame.cheese -= 1
+		Startgame.cheese_colected = false
 
 func close() -> void:
 	print("closing")

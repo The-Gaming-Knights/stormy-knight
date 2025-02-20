@@ -4,6 +4,7 @@ extends Control
 @onready var player: TextureRect = $ColorRect/CenterContainer/HBoxContainer/ColorRect/HBoxContainer/TextureRect
 @onready var prev: Button = $ColorRect/CenterContainer/HBoxContainer/ColorRect/HBoxContainer/prev
 @onready var next: Button = $ColorRect/CenterContainer/HBoxContainer/ColorRect/HBoxContainer/next
+@onready var counter: Label = $ColorRect/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer/cheesecounter
 
 func _on_play_pressed() -> void:
 	Engine.time_scale = 1
@@ -12,16 +13,19 @@ func _on_play_pressed() -> void:
 func _on_restart_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/level1.tscn")
 	Startgame.level = 1
+	Startgame.cheese = 0
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()
 
 func _ready() -> void:
 	player.texture= ImageTexture.create_from_image(Image.load_from_file("res://assets/sprites/select/select"+str(Startgame.skin)+".png"))
-
+	counter.hide()
 	
 func _process(delta: float) -> void:
-	pass
+	if Startgame.cheese >= 1:
+		counter.show()
+		counter.text = "cheese\ncolected\n"+str(Startgame.cheese)
 
 func _on_prev_pressed() -> void:
 	if Startgame.skin > 1:

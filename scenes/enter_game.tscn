@@ -30,7 +30,7 @@ offset_bottom = 118.0
 grow_horizontal = 2
 theme = ExtResource("1_cjlsv")
 theme_override_font_sizes/font_size = 100
-text = "stormy knight"
+text = "Stormy Knight"
 
 [node name="CenterContainer" type="CenterContainer" parent="ColorRect"]
 layout_mode = 1
@@ -63,6 +63,12 @@ text = "restart"
 [node name="Exit" type="Button" parent="ColorRect/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Exit
+"
+
+[node name="cheesecounter" type="Label" parent="ColorRect/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "cheese
+colected
 "
 
 [node name="ColorRect" type="ColorRect" parent="ColorRect/CenterContainer/HBoxContainer"]

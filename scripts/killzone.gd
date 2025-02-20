@@ -8,6 +8,9 @@ func _on_body_entered(body):
 	timer.start()
 	death = true
 	body.get_node("CollisionShape2D").queue_free()
+	if Startgame.cheese_colected == true:
+		Startgame.cheese -= 1
+		Startgame.cheese_colected = false
 
 
 
