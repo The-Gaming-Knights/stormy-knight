@@ -41,14 +41,23 @@ text = "level complete"
 
 [node name="next level" type="Button" parent="Control/ColorRect/CenterContainer/VBoxContainer"]
 layout_mode = 2
+tooltip_text = "pretty obvious. isn't it?"
 text = "next level"
 
 [node name="exit" type="Button" parent="Control/ColorRect/CenterContainer/VBoxContainer"]
 layout_mode = 2
+tooltip_text = "if you click this then
+ you will get to the
+ same place you appeared
+ when you just opened
+ the game"
 text = "exit to main menu"
 
 [node name="restart" type="Button" parent="Control/ColorRect/CenterContainer/VBoxContainer"]
 layout_mode = 2
+tooltip_text = "why do you want 
+to click this? you 
+just finished the level."
 text = "restart"
 
 [connection signal="pressed" from="Control/ColorRect/CenterContainer/VBoxContainer/next level" to="Control" method="_on_button_pressed"]

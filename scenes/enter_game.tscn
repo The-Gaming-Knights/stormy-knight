@@ -53,15 +53,25 @@ theme = ExtResource("1_cjlsv")
 
 [node name="Play" type="Button" parent="ColorRect/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
+tooltip_text = "click to 
+play/continue"
 text = "Play
 "
 
 [node name="restart" type="Button" parent="ColorRect/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
+tooltip_text = "your progress will
+ be discarded and
+ you will start playing
+ from level 1"
 text = "restart"
 
 [node name="Exit" type="Button" parent="ColorRect/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
+tooltip_text = "are you sure you 
+don't want to 
+continue playing this 
+awesome game"
 text = "Exit
 "
 

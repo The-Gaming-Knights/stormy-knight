@@ -40,14 +40,17 @@ text = "pause menu"
 
 [node name="Button" type="Button" parent="ColorRect/Container/VBoxContainer"]
 layout_mode = 2
+tooltip_text = "this should be obvious"
 text = "exit to main menu"
 
 [node name="Button2" type="Button" parent="ColorRect/Container/VBoxContainer"]
 layout_mode = 2
+tooltip_text = "do you want to guess"
 text = "resume"
 
 [node name="restart" type="Button" parent="ColorRect/Container/VBoxContainer"]
 layout_mode = 2
+tooltip_text = "restart the level from the start"
 text = "restart"
 
 [connection signal="pressed" from="ColorRect/Container/VBoxContainer/Button" to="." method="_on_button_pressed"]

@@ -13,7 +13,8 @@ func _on_play_pressed() -> void:
 func _on_restart_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/level1.tscn")
 	Startgame.level = 1
-	Startgame.cheese = 0
+	for i in range(len(Startgame.cheese)):
+		Startgame.cheese[1] = false
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()
