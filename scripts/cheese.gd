@@ -4,5 +4,4 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	queue_free()
-	Startgame.cheese += 1
-	Startgame.cheese_colected = true
+	Startgame.cheese[Startgame.level-1] = true

@@ -1,102 +1,25 @@
-[gd_scene load_steps=17 format=3 uid="uid://br6b6xnk7ghcb"]
+[gd_scene load_steps=6 format=3 uid="uid://br6b6xnk7ghcb"]
 
 [ext_resource type="Script" path="res://scripts/cheese.gd" id="1_gojl5"]
-[ext_resource type="Texture2D" uid="uid://c1pj4dmwxd7ya" path="res://assets/sprites/coin.png" id="2_4dss5"]
+[ext_resource type="Texture2D" uid="uid://dumh217ul5ykr" path="res://assets/sprites/New Piskel.png" id="2_c7v4e"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w2tpq"]
-atlas = ExtResource("2_4dss5")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxayh"]
+atlas = ExtResource("2_c7v4e")
 region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wytxu"]
-atlas = ExtResource("2_4dss5")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qj0q6"]
-atlas = ExtResource("2_4dss5")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b12no"]
-atlas = ExtResource("2_4dss5")
-region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ubdqt"]
-atlas = ExtResource("2_4dss5")
-region = Rect2(64, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kur0g"]
-atlas = ExtResource("2_4dss5")
-region = Rect2(80, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yswn6"]
-atlas = ExtResource("2_4dss5")
-region = Rect2(96, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jse8l"]
-atlas = ExtResource("2_4dss5")
-region = Rect2(112, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_45o6m"]
-atlas = ExtResource("2_4dss5")
-region = Rect2(128, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6pefn"]
-atlas = ExtResource("2_4dss5")
-region = Rect2(144, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ljwty"]
-atlas = ExtResource("2_4dss5")
-region = Rect2(160, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_birri"]
-atlas = ExtResource("2_4dss5")
-region = Rect2(176, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g27hu"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w2tpq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wytxu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qj0q6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b12no")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ubdqt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kur0g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yswn6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jse8l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_45o6m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6pefn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ljwty")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_birri")
+"texture": SubResource("AtlasTexture_cxayh")
 }],
 "loop": true,
 "name": &"rotate",
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_g4wof"]
-radius = 5.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k25vo"]
+size = Vector2(16, 16)
 
 [node name="cheese" type="Area2D"]
 collision_mask = 2
@@ -106,9 +29,9 @@ script = ExtResource("1_gojl5")
 sprite_frames = SubResource("SpriteFrames_g27hu")
 animation = &"rotate"
 autoplay = "rotate"
-frame_progress = 0.92193
+frame_progress = 0.20712
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_g4wof")
+shape = SubResource("RectangleShape2D_k25vo")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

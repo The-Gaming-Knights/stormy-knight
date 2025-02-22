@@ -23,9 +23,10 @@ func _ready() -> void:
 	counter.hide()
 	
 func _process(delta: float) -> void:
-	if Startgame.cheese >= 1:
+	
+	if true in Startgame.cheese :
 		counter.show()
-		counter.text = "cheese\ncolected\n"+str(Startgame.cheese)
+		counter.text = "cheese\ncolected\n"+str(Startgame.cheese.count(true))
 
 func _on_prev_pressed() -> void:
 	if Startgame.skin > 1:
