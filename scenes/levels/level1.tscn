@@ -727,7 +727,7 @@ debug_color = Color(1, 0.380392, 0, 1)
 libraries = {
 "": SubResource("AnimationLibrary_cyr6y")
 }
-autoplay = "tornado"
+autoplay = "RESET"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="level/killzone/tornado"]
 z_index = 10
