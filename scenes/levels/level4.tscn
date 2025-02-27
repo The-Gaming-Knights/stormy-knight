@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bjibo8gjp6437" path="res://scenes/level_end.tscn" id="8_k0lii"]
 [ext_resource type="AudioStream" uid="uid://bt10gwpblwe2a" path="res://assets/music/musicforlevel(1).mp3" id="9_l6x4p"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ukk7y"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2j0q8"]
 texture = ExtResource("2_q81q7")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -253,7 +253,7 @@ texture = ExtResource("2_q81q7")
 9:10/0 = 0
 9:11/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nkxyk"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_603rg"]
 texture = ExtResource("3_s3hwx")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -489,7 +489,7 @@ texture = ExtResource("3_s3hwx")
 9:10/0 = 0
 9:11/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mdf24"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ck1e7"]
 texture = ExtResource("4_dgr81")
 0:0/0 = 0
 1:0/0 = 0
@@ -684,9 +684,9 @@ terrain_set_0/terrain_1/name = "normal ground"
 terrain_set_0/terrain_1/color = Color(0.426976, 0.755835, 0.273367, 1)
 terrain_set_0/terrain_2/name = "lava ground"
 terrain_set_0/terrain_2/color = Color(0.93991, 0.579852, 0.0987986, 1)
-sources/1 = SubResource("TileSetAtlasSource_nkxyk")
-sources/0 = SubResource("TileSetAtlasSource_ukk7y")
-sources/2 = SubResource("TileSetAtlasSource_mdf24")
+sources/1 = SubResource("TileSetAtlasSource_603rg")
+sources/0 = SubResource("TileSetAtlasSource_2j0q8")
+sources/2 = SubResource("TileSetAtlasSource_ck1e7")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uc8ji"]
 texture = ExtResource("4_vwb02")
