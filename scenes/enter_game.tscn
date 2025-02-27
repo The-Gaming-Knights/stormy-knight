@@ -64,7 +64,7 @@ tooltip_text = "your progress will
  be discarded and
  you will start playing
  from level 1"
-text = "restart"
+text = "Restart"
 
 [node name="Exit" type="Button" parent="ColorRect/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
@@ -77,8 +77,8 @@ text = "Exit
 
 [node name="cheesecounter" type="Label" parent="ColorRect/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "cheese
-colected
+text = "Cheese
+Collected
 "
 
 [node name="ColorRect" type="ColorRect" parent="ColorRect/CenterContainer/HBoxContainer"]
