@@ -80,7 +80,11 @@ text = "Exit
 [node name="cheesecounter" type="Label" parent="ColorRect/CenterContainer/HBoxContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Cheese
+<<<<<<< HEAD
+collected
+=======
 Collected
+>>>>>>> b8ab835b35e8e3eda3516c63c4ea59f507363f9a
 "
 
 [node name="ColorRect" type="ColorRect" parent="ColorRect/CenterContainer/HBoxContainer"]
