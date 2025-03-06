@@ -36,22 +36,22 @@ alignment = 1
 
 [node name="TextEdit" type="Label" parent="ColorRect/Container/VBoxContainer"]
 layout_mode = 2
-text = "pause menu"
+text = "Pause Menu"
 
 [node name="Button" type="Button" parent="ColorRect/Container/VBoxContainer"]
 layout_mode = 2
 tooltip_text = "this should be obvious"
-text = "exit to main menu"
+text = "Exit To Main Menu"
 
 [node name="Button2" type="Button" parent="ColorRect/Container/VBoxContainer"]
 layout_mode = 2
 tooltip_text = "do you want to guess"
-text = "resume"
+text = "Resume"
 
 [node name="restart" type="Button" parent="ColorRect/Container/VBoxContainer"]
 layout_mode = 2
 tooltip_text = "restart the level from the start"
-text = "restart"
+text = "Restart"
 
 [connection signal="pressed" from="ColorRect/Container/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ColorRect/Container/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
