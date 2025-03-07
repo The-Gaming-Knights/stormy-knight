@@ -823,7 +823,7 @@ sources/0 = SubResource("TileSetAtlasSource_uc8ji")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ihawo"]
 
-[node name="game" type="Node2D"]
+[node name="game2" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_ptjvg")
 
