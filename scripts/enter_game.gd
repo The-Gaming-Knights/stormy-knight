@@ -8,7 +8,11 @@ extends Control
 
 func _on_play_pressed() -> void:
 	Engine.time_scale = 1
-	get_tree().change_scene_to_file("res://scenes/levels/level"+str(Startgame.level)+".tscn")
+	if Startgame.level == 2:
+		get_tree().change_scene_to_file("res://scenes/lorescreen.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/levels/level"+str(Startgame.level)+".tscn")
+		print("buttone",Startgame.level)
 	
 func _on_restart_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/level1.tscn")
@@ -22,6 +26,8 @@ func _on_exit_pressed() -> void:
 func _ready() -> void:
 	player.texture= ImageTexture.create_from_image(Image.load_from_file("res://assets/sprites/select/select"+str(Startgame.skin)+".png"))
 	counter.hide()
+	if Startgame.level == 7 :
+		play.free()
 	
 func _process(delta: float) -> void:
 	
