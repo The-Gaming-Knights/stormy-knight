@@ -35,13 +35,21 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="ColorRect/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "bla bla bla
-this is important 
-lore to the story"
+theme_override_font_sizes/font_size = 29
+text = "After going through the strange machine, the 
+door opens and a blinding
+light hits your eyes; you squint to block the 
+invisible spears jabbing your eyes.  After your 
+eyes stop burning,  you look around to see
+no remains of your home. You are then determined
+to go back to your time.
+
+*Find the machine you
+found in your time in this time*"
 
 [node name="level2" type="Button" parent="ColorRect/CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "ok i got it"
+text = "Okay I got it."
 
 [connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/level2" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/level2" to="." method="_on_level_2_pressed"]

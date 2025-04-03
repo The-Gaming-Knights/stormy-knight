@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bl6v2bimf57a6" path="res://assets/sprites/tileset/templet 1casle.png" id="2_dia4e"]
 [ext_resource type="Texture2D" uid="uid://b5td0npws5xs1" path="res://assets/sprites/tileset/templet lava.png" id="3_xaqvq"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ep5ny"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hdmjh"]
 texture = ExtResource("1_f5rqp")
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -302,7 +302,7 @@ texture = ExtResource("1_f5rqp")
 9:10/0 = 0
 9:11/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i0vlj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qk6hs"]
 texture = ExtResource("2_dia4e")
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -605,7 +605,7 @@ texture = ExtResource("2_dia4e")
 9:10/0 = 0
 9:11/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4kvo3"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_obkpg"]
 texture = ExtResource("3_xaqvq")
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -907,7 +907,7 @@ texture = ExtResource("3_xaqvq")
 9:10/0 = 0
 9:11/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p1pce"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rs7bw"]
 texture = ExtResource("2_dia4e")
 0:0/0 = 0
 1:0/0 = 0
@@ -1130,10 +1130,10 @@ terrain_set_0/terrain_5/name = "dark castle"
 terrain_set_0/terrain_5/color = Color(0.35984, 0.352376, 0.32149, 1)
 terrain_set_0/terrain_6/name = "ice castle"
 terrain_set_0/terrain_6/color = Color(0.343973, 0.453501, 0.577539, 1)
-sources/1 = SubResource("TileSetAtlasSource_i0vlj")
-sources/0 = SubResource("TileSetAtlasSource_ep5ny")
-sources/2 = SubResource("TileSetAtlasSource_4kvo3")
-sources/3 = SubResource("TileSetAtlasSource_p1pce")
+sources/1 = SubResource("TileSetAtlasSource_qk6hs")
+sources/0 = SubResource("TileSetAtlasSource_hdmjh")
+sources/2 = SubResource("TileSetAtlasSource_obkpg")
+sources/3 = SubResource("TileSetAtlasSource_rs7bw")
 
 [node name="TileMap4" type="TileMap"]
 z_index = 2
