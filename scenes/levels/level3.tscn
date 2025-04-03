@@ -154,7 +154,7 @@ sources/0 = SubResource("TileSetAtlasSource_uc8ji")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_30xee"]
 shader = ExtResource("1_fwdeo")
-shader_parameter/speed = 1.0
+shader_parameter/speed = 4.0
 shader_parameter/strength = 0.005
 shader_parameter/y_origin = 200.0
 shader_parameter/restrict_dir = 0
@@ -193,8 +193,8 @@ size = Vector2(17, 33)
 size = Vector2(6, 16)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_5ldoq"]
-a = Vector2(997, 8)
-b = Vector2(-250, 8)
+a = Vector2(-599, -57)
+b = Vector2(-620, -57)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ec001"]
 size = Vector2(5, 15.5)
@@ -261,6 +261,10 @@ position = Vector2(1698, 209)
 shape = SubResource("RectangleShape2D_n5ar6")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="level/killzone"]
+position = Vector2(2153, 80)
+shape = SubResource("SegmentShape2D_5ldoq")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="level/killzone"]
 position = Vector2(2153, 80)
 shape = SubResource("SegmentShape2D_5ldoq")
 
