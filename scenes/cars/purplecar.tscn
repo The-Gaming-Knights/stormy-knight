@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2cwgf0ubba6s"]
+
+[ext_resource type="Texture2D" uid="uid://cg62ak8aa3xri" path="res://assets/sprites/cars/car pirple.png" id="1_k18oo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1rwu"]
+atlas = ExtResource("1_k18oo")
+region = Rect2(0, 160, 75, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ly6mt"]
+atlas = ExtResource("1_k18oo")
+region = Rect2(0, 128, 75, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yxva0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1rwu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ly6mt")
+}],
+"loop": true,
+"name": &"driving",
+"speed": 10.0
+}]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_yxva0")
+animation = &"driving"
+autoplay = "driving"
+frame_progress = 0.5214
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(1.5, 0)
+polygon = PackedVector2Array(-38, 2, -34, 8, 36, 8, 36, 7, 34, 7, 34, 3, 35, 3, 35, -2, 22, -2, 22, -3, 21, -6, 20, -7, 15, -7, 14, -6, 13, -2, 7, -2, -4, -11, -18, -11, -31, -2, -36, -4, -38, -1)

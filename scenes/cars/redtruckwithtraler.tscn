@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://b72mku8snk8ng"]
+
+[ext_resource type="Texture2D" uid="uid://drdxgd8ewxiqn" path="res://assets/sprites/cars/large red truck.png" id="1_fnch7"]
+[ext_resource type="Texture2D" uid="uid://f7v54qmdkx8e" path="res://assets/sprites/cars/truck behind.png" id="2_3ht81"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0m2r"]
+atlas = ExtResource("1_fnch7")
+region = Rect2(0, 240, 74, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dqqj"]
+atlas = ExtResource("1_fnch7")
+region = Rect2(0, 192, 74, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gskxn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0m2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dqqj")
+}],
+"loop": true,
+"name": &"driving",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pl4bh"]
+atlas = ExtResource("2_3ht81")
+region = Rect2(0, 192, 100, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urxqj"]
+atlas = ExtResource("2_3ht81")
+region = Rect2(0, 240, 100, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2a1e0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pl4bh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urxqj")
+}],
+"loop": true,
+"name": &"dragging",
+"speed": 10.0
+}]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gskxn")
+animation = &"driving"
+autoplay = "driving"
+frame_progress = 0.448564
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(-56, 0)
+sprite_frames = SubResource("SpriteFrames_2a1e0")
+animation = &"dragging"
+autoplay = "dragging"
+frame_progress = 0.919821
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-33, 16, 32, 16, 32, 15, 31, 15, 31, -2, 20, -3, 16, -19, -6, -21, -8, -19, -105, -19, -105, 7, -101, 7, -101, 16, -66, 16, -66, 7, -33, 7)

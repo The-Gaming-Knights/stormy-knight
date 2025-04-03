@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0vqeegktfmjq"
-path="res://.godot/imported/New Piskel.png-1446c6f7bc3a5aa23b841fdb52891ad7.ctex"
+uid="uid://bawovt1xfr4cr"
+path="res://.godot/imported/flotation wheals.png-cca53c293b538de8217e5ab1f9f21e24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tileset/New Piskel.png"
-dest_files=["res://.godot/imported/New Piskel.png-1446c6f7bc3a5aa23b841fdb52891ad7.ctex"]
+source_file="res://assets/sprites/cars/flotation wheals.png"
+dest_files=["res://.godot/imported/flotation wheals.png-cca53c293b538de8217e5ab1f9f21e24.ctex"]
 
 [params]
 

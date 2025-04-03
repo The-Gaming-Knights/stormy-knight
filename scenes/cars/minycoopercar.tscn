@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3gg0v72nkuy4"]
+
+[ext_resource type="Texture2D" uid="uid://dl5wum1nmcv3g" path="res://assets/sprites/cars/miny cooper.png" id="1_kyxoi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwb25"]
+atlas = ExtResource("1_kyxoi")
+region = Rect2(0, 160, 60, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2u5e7"]
+atlas = ExtResource("1_kyxoi")
+region = Rect2(0, 128, 60, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8gygi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwb25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2u5e7")
+}],
+"loop": true,
+"name": &"driving",
+"speed": 10.0
+}]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8gygi")
+animation = &"driving"
+autoplay = "driving"
+frame_progress = 0.192774
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-29, 7, -28, 7, -28, 8, 26, 8, 27, 7, 27, 2, 25, 0, 23, -1, 12, -2, -1, -10, -24, -10, -28, -2)

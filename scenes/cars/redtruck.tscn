@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://fs52sjpghq22"]
+
+[ext_resource type="Texture2D" uid="uid://drdxgd8ewxiqn" path="res://assets/sprites/cars/large red truck.png" id="1_j51dw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0m2r"]
+atlas = ExtResource("1_j51dw")
+region = Rect2(0, 240, 74, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dqqj"]
+atlas = ExtResource("1_j51dw")
+region = Rect2(0, 192, 74, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gskxn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0m2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0dqqj")
+}],
+"loop": true,
+"name": &"driving",
+"speed": 10.0
+}]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gskxn")
+animation = &"driving"
+autoplay = "driving"
+frame_progress = 0.993049
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-33, 16, 32, 16, 32, 15, 31, 15, 31, -2, 20, -3, 16, -19, -6, -21, -6, 8, -33, 8)

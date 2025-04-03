@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3w73ucvxf3t5"]
+
+[ext_resource type="Texture2D" uid="uid://e8jmdxs4ics4" path="res://assets/sprites/cars/ramp pickup truck.png" id="1_wlih8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scvm6"]
+atlas = ExtResource("1_wlih8")
+region = Rect2(0, 192, 74, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21g07"]
+atlas = ExtResource("1_wlih8")
+region = Rect2(0, 240, 74, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w4yjq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scvm6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21g07")
+}],
+"loop": true,
+"name": &"driving",
+"speed": 5.0
+}]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_w4yjq")
+animation = &"driving"
+autoplay = "driving"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-35, 6, -35, 14, -36, 14, -36, 16, -29, 16, 36, 16, 36, 14, 35, 14, 35, 7, 24, 5, 21, -5, -2, -5, 30, -21, -25, 6)
