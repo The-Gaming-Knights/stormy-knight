@@ -1,7 +1,7 @@
 extends Node
 
-var level = 7
-var lastlevel = 7
+var level = 6
+var lastlevel = 6
 var skin = 1
 var cheese = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
 # Called when the node enters the scene tree for the first time.
