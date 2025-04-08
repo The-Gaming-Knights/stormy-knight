@@ -26,7 +26,7 @@ func _on_exit_pressed() -> void:
 func _ready() -> void:
 	player.texture= ImageTexture.create_from_image(Image.load_from_file("res://assets/sprites/select/select"+str(Startgame.skin)+".png"))
 	counter.hide()
-	if Startgame.level == 7 :
+	if Startgame.level == Startgame.lastlevel+1 :
 		play.free()
 	
 func _process(delta: float) -> void:

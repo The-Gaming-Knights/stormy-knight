@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://iqdnc8fufv4p"]
+[gd_scene load_steps=29 format=3 uid="uid://iqdnc8fufv4p"]
 
 [ext_resource type="Script" path="res://scripts/in_game_menu.gd" id="1_6fxfv"]
 [ext_resource type="Shader" path="res://level3.gdshader" id="1_fwdeo"]
@@ -196,6 +196,10 @@ size = Vector2(6, 16)
 a = Vector2(-599, -57)
 b = Vector2(-620, -57)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_cjo8b"]
+a = Vector2(779, 44)
+b = Vector2(-470, 44)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ec001"]
 size = Vector2(5, 15.5)
 
@@ -267,6 +271,10 @@ shape = SubResource("SegmentShape2D_5ldoq")
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="level/killzone"]
 position = Vector2(2153, 80)
 shape = SubResource("SegmentShape2D_5ldoq")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="level/killzone"]
+position = Vector2(2373, 43)
+shape = SubResource("SegmentShape2D_cjo8b")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="level/killzone"]
 position = Vector2(1648.5, 177.5)

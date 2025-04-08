@@ -29,8 +29,9 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5vlln")
 animation = &"driving"
+autoplay = "driving"
 frame_progress = 0.243885
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
 polygon = PackedVector2Array(-36, 8, 39, 8, 39, 6, 37, 4, 39, 4, 39, 1, 37, 0, 34, 0, 34, -5, 29, -2, 17, -4, 9, -10, -15, -10, -28, -6, -36, -2, -39, -4, -39, 0, -38, 1, -39, 2, -39, 5)
+one_way_collision = true

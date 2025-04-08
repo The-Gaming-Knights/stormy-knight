@@ -64,3 +64,4 @@ frame_progress = 0.919821
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-33, 16, 32, 16, 32, 15, 31, 15, 31, -2, 20, -3, 16, -19, -6, -21, -8, -19, -105, -19, -105, 7, -101, 7, -101, 16, -66, 16, -66, 7, -33, 7)
+one_way_collision = true

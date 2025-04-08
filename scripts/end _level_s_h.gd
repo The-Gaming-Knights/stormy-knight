@@ -10,7 +10,7 @@ func _ready() -> void:
 	print("ready",Startgame.level)
 	hide()
 	bground.hide()
-	if Startgame.level == 6:
+	if Startgame.level == Startgame.lastlevel:
 		next_button.free()
 		label.text = "  you win!"
 		bground.show()
