@@ -381,7 +381,6 @@ libraries = {
 autoplay = "driving car1"
 
 [node name="CanvasLayer" parent="." instance=ExtResource("8_hss2p")]
-visible = false
 
 [node name="Area2D" parent="." instance=ExtResource("9_noneu")]
 position = Vector2(802, -53)
