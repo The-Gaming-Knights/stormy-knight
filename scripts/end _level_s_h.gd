@@ -12,7 +12,7 @@ func _ready() -> void:
 	bground.hide()
 	if Startgame.level == Startgame.lastlevel:
 		next_button.free()
-		label.text = "  you win!"
+		label.text = "        You see the same \n        flash of light, \n        you feel the warm sunlight you've \n        missed opon your face,\n        you see your castle \n        in the distance... \n        you've done it!"
 		bground.show()
 		color_rect.color = Color(.0,.0,.0,.0)
 
