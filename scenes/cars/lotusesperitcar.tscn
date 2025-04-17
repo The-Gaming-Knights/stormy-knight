@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsvb2o8xljk22"]
+[gd_scene load_steps=6 format=3 uid="uid://dsvb2o8xljk22"]
 
+[ext_resource type="Script" path="res://scripts/carflip.gd" id="1_3ypim"]
 [ext_resource type="Texture2D" uid="uid://bxvd5sw2p4gpg" path="res://assets/sprites/cars/sci-fi E-spirit.png" id="1_yd47a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_let2u"]
@@ -25,12 +26,13 @@ animations = [{
 }]
 
 [node name="AnimatableBody2D" type="AnimatableBody2D"]
+script = ExtResource("1_3ypim")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 7
 sprite_frames = SubResource("SpriteFrames_5vlln")
 animation = &"driving"
 autoplay = "driving"
-frame_progress = 0.243885
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-36, 8, 39, 8, 39, 6, 37, 4, 39, 4, 39, 1, 37, 0, 34, 0, 34, -5, 29, -2, 17, -4, 9, -10, -15, -10, -28, -6, -36, -2, -39, -4, -39, 0, -38, 1, -39, 2, -39, 5)

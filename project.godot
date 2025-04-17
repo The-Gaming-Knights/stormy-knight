@@ -19,6 +19,12 @@ config/icon="res://icon.svg"
 
 Startgame="*res://startgame.gd"
 
+[display]
+
+window/size/viewport_width=1728
+window/size/viewport_height=972
+window/stretch/mode="viewport"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"

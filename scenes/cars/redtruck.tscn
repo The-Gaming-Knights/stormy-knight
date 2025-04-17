@@ -25,6 +25,7 @@ animations = [{
 }]
 
 [node name="AnimatableBody2D" type="AnimatableBody2D"]
+z_index = 7
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gskxn")

@@ -15,7 +15,7 @@ var dead = false
 func _physics_process(delta: float) -> void:
 	if KILLZONE.death == true and dead == false:
 		dead = true
-		velocity.y = -200
+		velocity.y = -300
 	if Input.is_action_just_pressed("restart"):
 		Engine.time_scale = 1
 		get_tree().reload_current_scene()
