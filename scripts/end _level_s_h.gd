@@ -3,17 +3,14 @@ extends Control
 @onready var next_button := $"ColorRect/CenterContainer/VBoxContainer/next level" as Button
 @onready var restart: Button = $ColorRect/CenterContainer/VBoxContainer/restart
 @onready var label: Label = $ColorRect/CenterContainer/VBoxContainer/Label
-@onready var bground: TextureRect = $TextureRect
 @onready var color_rect: ColorRect = $ColorRect
 
 func _ready() -> void:
 	print("ready",Startgame.level)
 	hide()
-	bground.hide()
 	if Startgame.level == Startgame.lastlevel:
 		next_button.free()
 		label.text = "        You see the same \n        flash of light, \n        you feel the warm sunlight you've \n        missed opon your face,\n        you see your castle \n        in the distance... \n        you've done it!"
-		bground.show()
 		color_rect.color = Color(.0,.0,.0,.0)
 
 func _on_button_pressed() -> void:
