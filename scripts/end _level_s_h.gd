@@ -11,7 +11,7 @@ func _ready() -> void:
 	if Startgame.level == Startgame.lastlevel:
 		next_button.free()
 		label.text = "        You see the same \n        flash of light, \n        you feel the warm sunlight you've \n        missed opon your face,\n        you see your castle \n        in the distance... \n        you've done it!"
-		color_rect.color = Color(.0,.0,.0,.0)
+		#color_rect.color = Color(.0,.0,.0,.0)
 
 func _on_button_pressed() -> void:
 	Startgame.level += 1
