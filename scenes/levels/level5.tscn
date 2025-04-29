@@ -757,6 +757,7 @@ position = Vector2(1231, 0)
 
 [node name="musicforlevel(5)" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_ei5al")
+autoplay = true
 
 [node name="cheese" parent="." instance=ExtResource("11_mwg8l")]
 position = Vector2(1407, -13)

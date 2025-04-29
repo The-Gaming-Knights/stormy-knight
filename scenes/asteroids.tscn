@@ -1,0 +1,89 @@
+[gd_scene load_steps=14 format=3 uid="uid://4ifj8xwo4bxb"]
+
+[ext_resource type="Script" path="res://scripts/asteroids.gd" id="1_udr78"]
+[ext_resource type="PackedScene" uid="uid://chfdsp78x4a6e" path="res://scenes/killzone.tscn" id="1_x3wpl"]
+[ext_resource type="Texture2D" uid="uid://b3474mvakx0rj" path="res://assets/sprites/astiroid(1).png" id="2_1c12l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqx18"]
+atlas = ExtResource("2_1c12l")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ek5ow"]
+atlas = ExtResource("2_1c12l")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3atto"]
+atlas = ExtResource("2_1c12l")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cklw"]
+atlas = ExtResource("2_1c12l")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfxd1"]
+atlas = ExtResource("2_1c12l")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8a052"]
+atlas = ExtResource("2_1c12l")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxnsa"]
+atlas = ExtResource("2_1c12l")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ma7iw"]
+atlas = ExtResource("2_1c12l")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x2eqb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqx18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ek5ow")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3atto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cklw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfxd1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8a052")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxnsa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ma7iw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_15v3q"]
+radius = 3.0
+
+[node name="asteroids" type="Node2D"]
+script = ExtResource("1_udr78")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x2eqb")
+frame_progress = 0.0313315
+
+[node name="killzone" parent="." instance=ExtResource("1_x3wpl")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(-4, 1)
+shape = SubResource("CircleShape2D_15v3q")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-1, -1)
+target_position = Vector2(-7, 7)

@@ -361,3 +361,4 @@ position = Vector2(2176, -207)
 
 [node name="musicforlevel(6)" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_eehjm")
+autoplay = true
