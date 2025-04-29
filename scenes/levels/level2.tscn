@@ -310,12 +310,6 @@ position = Vector2(1392, 98)
 [node name="asteroids2" parent="level" instance=ExtResource("12_rxx4m")]
 position = Vector2(132, -91)
 
-[node name="asteroids3" parent="level" instance=ExtResource("12_rxx4m")]
-position = Vector2(146, -37)
-
-[node name="asteroids4" parent="level" instance=ExtResource("12_rxx4m")]
-position = Vector2(273, -104)
-
 [node name="CanvasLayer" parent="." instance=ExtResource("7_u08hd")]
 
 [node name="Area2D" parent="." instance=ExtResource("8_y1swi")]
