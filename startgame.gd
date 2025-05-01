@@ -1,6 +1,6 @@
 extends Node
 
-var level = 2
+var level = 5
 var lastlevel = 6
 var skin = 1
 var cheese = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]

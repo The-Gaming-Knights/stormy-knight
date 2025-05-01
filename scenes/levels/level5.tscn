@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cwo01hgqa0fc8"]
+[gd_scene load_steps=20 format=3 uid="uid://cwo01hgqa0fc8"]
 
 [ext_resource type="Script" path="res://scripts/in_game_menu.gd" id="1_bidsi"]
 [ext_resource type="Texture2D" uid="uid://cwvp14u3l0ue6" path="res://assets/sprites/tileset/templet 1ice.png" id="2_3a1ck"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://chfdsp78x4a6e" path="res://scenes/killzone.tscn" id="6_rvixo"]
 [ext_resource type="PackedScene" uid="uid://dr1at06rdiewt" path="res://scenes/player.tscn" id="7_c5chn"]
 [ext_resource type="PackedScene" uid="uid://cgrc8uu6uxqje" path="res://scenes/pauseui.tscn" id="8_pus1u"]
+[ext_resource type="PackedScene" uid="uid://ddmxsyq8xnfp0" path="res://scenes/iceckles.tscn" id="8_rljtw"]
 [ext_resource type="PackedScene" uid="uid://bjibo8gjp6437" path="res://scenes/level_end.tscn" id="9_h25dh"]
 [ext_resource type="AudioStream" uid="uid://bt10gwpblwe2a" path="res://assets/music/musicforlevel(1).mp3" id="10_ei5al"]
 [ext_resource type="PackedScene" uid="uid://br6b6xnk7ghcb" path="res://scenes/cheese.tscn" id="11_mwg8l"]
@@ -749,6 +750,9 @@ position = Vector2(0, -5)
 zoom = Vector2(4, 4)
 limit_bottom = 57
 position_smoothing_enabled = true
+
+[node name="iceckles" parent="level" instance=ExtResource("8_rljtw")]
+position = Vector2(-9, -153)
 
 [node name="Area2D" parent="." instance=ExtResource("9_h25dh")]
 position = Vector2(1231, 0)
