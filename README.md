@@ -1,20 +1,6 @@
-# Minimal viable product
+# Stormy Knight
 
-Idea: Survival, adventure and challenge
-Emotion: Struggle
-Goal: Go though all the levels, survive
+After a devastating tornado attack on your castle, you flee using a time machine. However, lightning strikes it during the escape, overcharging it and throwing you into a dangerous lava-filled landscape. The magma radiates immense heat, and survival becomes your top priority. You reach the time machine and attempt to program your return, but the overheating causes it to malfunction, catapulting you into a chilling ice age. Now, freezing and desperate, you press on.
+Your next destination is far in the future, in a city plagued by deadly lightning storms. Every step is a gamble as you navigate the perilous environment. Each location challenges your ability to survive as you work tirelessly to find hidden upgrades - peculiar cheeses - to enhance the time machine. Facing extreme weather, natural disasters, and life-threatening conditions, your ultimate goal is to repair the time machine and return to your own time. Through persistence and resourcefulness, you aim to escape this perilous time-hopping ordeal.
 
-Mechanics: 
-  Character: Human Knight
-  Easy then hard
-  Roguelike - no lives, no health, restart on loosing
-  Collect cheese at the end after exploring the level, find it in a secret place
-  Different disasters per level
-  icefalls, snowfalls, lightning storms, lava pools, 
-
-  swimming, underwater, crouching, grappling and aiming, collecting, interacting with objects (?)
-  slippery path after storms
-
-Enemies: embodyment of the weather
- 
-Ideas for later - add a creative component or level editor
+This game was created for the [OGPC Season 18 (2024-2025)](https://www.ogpc.info/seasons/2025.html) competition
