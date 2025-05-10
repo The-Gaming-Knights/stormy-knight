@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dngpybn465xfw"]
+[gd_scene load_steps=28 format=3 uid="uid://dngpybn465xfw"]
 
 [ext_resource type="Script" path="res://scripts/in_game_menu.gd" id="1_mqyub"]
 [ext_resource type="Texture2D" uid="uid://6e8ye820euse" path="res://assets/sprites/tileset/sci-fi.png" id="3_itsco"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://d3gg0v72nkuy4" path="res://scenes/cars/minycoopercar.tscn" id="11_vqrnj"]
 [ext_resource type="Theme" uid="uid://ehrmkdn2lpq0" path="res://gametheme.tres" id="12_lr5mi"]
 [ext_resource type="PackedScene" uid="uid://br6b6xnk7ghcb" path="res://scenes/cheese.tscn" id="13_lpih6"]
+[ext_resource type="PackedScene" uid="uid://dhthr2im5p6tc" path="res://scenes/lightning.tscn" id="17_008rq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uc8ji"]
 texture = ExtResource("5_wnr41")
@@ -275,6 +276,12 @@ script = ExtResource("1_mqyub")
 
 [node name="level" type="Node2D" parent="."]
 process_mode = 1
+
+[node name="lightning" parent="level" instance=ExtResource("17_008rq")]
+position = Vector2(794, -57)
+
+[node name="lightning2" parent="level" instance=ExtResource("17_008rq")]
+position = Vector2(2069, -217)
 
 [node name="TileMap2" type="TileMap" parent="level"]
 modulate = Color(0.54902, 0.54902, 0.54902, 0.768627)

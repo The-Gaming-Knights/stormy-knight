@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1pj4dmwxd7ya"
-path="res://.godot/imported/coin.png-c8309bf0f8fb5f3a7d1e96a4eb3f02ce.ctex"
+uid="uid://b3qige5hou772"
+path="res://.godot/imported/lightning.png-666708d4b707eede05c5a67148d3854f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/coin.png"
-dest_files=["res://.godot/imported/coin.png-c8309bf0f8fb5f3a7d1e96a4eb3f02ce.ctex"]
+source_file="res://assets/sprites/lightning.png"
+dest_files=["res://.godot/imported/lightning.png-666708d4b707eede05c5a67148d3854f.ctex"]
 
 [params]
 

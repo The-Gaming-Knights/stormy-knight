@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=3 uid="uid://dhthr2im5p6tc"]
+
+[ext_resource type="Texture2D" uid="uid://bgbbce7y6v2br" path="res://assets/sprites/lightning rod.png" id="1_iepjt"]
+[ext_resource type="Script" path="res://scripts/lightning.gd" id="1_iuep7"]
+[ext_resource type="Texture2D" uid="uid://b3qige5hou772" path="res://assets/sprites/lightning.png" id="2_khii3"]
+[ext_resource type="PackedScene" uid="uid://chfdsp78x4a6e" path="res://scenes/killzone.tscn" id="4_mf7qe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1k85d"]
+atlas = ExtResource("1_iepjt")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhh4f"]
+atlas = ExtResource("1_iepjt")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1lmg"]
+atlas = ExtResource("1_iepjt")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hyfxb"]
+atlas = ExtResource("1_iepjt")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brlwo"]
+atlas = ExtResource("1_iepjt")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xyi6x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1k85d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhh4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1lmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hyfxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brlwo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="lightning" type="Node2D"]
+z_index = 20
+script = ExtResource("1_iuep7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xyi6x")
+autoplay = "default"
+frame_progress = 0.463907
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatedSprite2D"]
+position = Vector2(-78, -408)
+texture = ExtResource("2_khii3")
+
+[node name="killzone" parent="." instance=ExtResource("4_mf7qe")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="killzone"]
+position = Vector2(-5, -8)
+polygon = PackedVector2Array(10, 0, -10, -26, 11, -89, 18, -115, 32, -145, 50, -139, 52, -145, 82, -237, 75, -240, 44, -149, 35, -153, 52, -199, 11.1801, -232.676, 47, -275, 39, -280, 4.98338, -237.789, -19, -258, 4, -294, -2, -302, -8.38222, -310.235, 17, -328, 81, -353, 83, -351, 119, -325, 119, -331, 87, -354, 81, -362, 43, -349, 12, -335, -13, -319, -31, -345, -57.7217, -373.899, -47, -399, -47, -419.955, -30, -418, 12.7618, -398.715, 12, -386, 18, -380, 21, -395, 23, -400, 38, -418, 43, -418, 43, -426, 36, -456, 42, -454, 51, -446, 57, -444, 57, -435, 61, -430, 65, -403, 69, -401, 70, -397, 72, -397, 73, -401, 83, -414, 113, -415, 111, -421, 107, -423, 79, -422, 70, -416, 69, -423, 64, -433, 64, -441, 64, -446, 52, -453, 42, -460, 33.5084, -463.65, 18, -512, 12, -512, -52, -498, -51.2534, -523.384, -1, -524, 0, -532, 16, -567, 29, -586, 34, -597, 45, -611, 36, -617, 23, -596, 9, -575, -5, -545, -8.73607, -532, -51, -532, -57, -532, -60, -496, -79, -491, -105, -523, -115.308, -534.52, -109, -543, -94, -558, -80, -571, -80, -575, -83, -584, -89, -602, -114, -650, -104, -658, -72, -675, -72, -686, -72, -706, -80, -748, -80, -768, -90, -800, -96, -800, -88, -769, -86, -747, -79, -706, -79, -684, -111, -666, -118, -660, -124, -656, -145, -640, -144, -629, -140.855, -618.517, -166, -602, -209, -571, -202, -563, -193, -548, -185, -520, -224, -536, -243, -546, -258, -559, -265, -550, -264, -535, -253, -549, -246, -542, -225, -530, -184, -512, -177, -511, -184, -543, -198.032, -566.003, -165, -591, -138, -609, -132, -611, -138.259, -633.195, -118, -648, -112, -636, -96, -604, -87.2459, -579.428, -87, -577, -94, -573, -118, -547, -122, -542, -123, -536, -108, -519, -125, -489, -142, -444, -171, -424, -203, -394, -197, -387, -178, -372, -145.053, -340.7, -151, -336, -181, -322, -203, -313, -216, -311, -220, -337, -235, -367, -240, -369, -226, -336, -221, -311, -215, -303, -202, -303, -175.351, -313.189, -164, -307, -131, -279, -115, -264, -133, -247, -193.01, -187.928, -246, -233, -251, -235, -247, -228, -197, -184, -190, -177, -127, -240, -107.657, -256.537, -85.9576, -235.657, -133, -158, -156, -116, -148, -111, -129.028, -145.644, -114, -103, -108, -94, -106.82, -82.2004, -120, -82, -152, -60, -148, -57, -146, -53, -114, -74, -106, -74, -99, -74, -102, -94, -106, -99, -125, -153, -78, -228, -77, -231, -125, -280, -168, -316, -140, -332, -139, -340, -192.399, -391.155, -166, -415, -154, -424, -144, -419, -124, -401, -131, -395, -133, -374, -129, -373, -128, -368, -126, -368, -123, -387, -117, -395, -117, -400, -131, -415, -147.53, -427.512, -135, -436, -118, -484, -101.676, -511.095, -84, -489, -79, -481, 14.5648, -503.551, 29, -456, 36.2526, -426, 32, -426, 25, -421, 15.1345, -403.718, -32, -426, -47, -428, -54, -428, -54, -406, -64, -382, -66, -376, -60, -368, -43, -351, -45.6007, -349.918, -98, -341, -72, -277, -62, -268, -46, -223, -65, -193, -61, -185, -41, -154, -23, -117, -18, -118, -37, -157, -57.3681, -190.685, -38, -221, -57, -270, -64, -278, -88, -334, -36, -342, -21, -322, -4.89816, -297.876, -28, -265, -30, -260, 43, -199, 26, -157, 23, -157, 23, -155, 25.2511, -155.194, 9, -116, 3, -94, -20, -26, 0, 0, 4, 16, 6, 16)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+
+[node name="Timer2" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout4seck"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout1seck"]

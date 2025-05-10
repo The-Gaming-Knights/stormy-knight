@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmwygqj6jt403"
-path="res://.godot/imported/fruit.png-3735163b668af10c2b35b52cba81b68a.ctex"
+uid="uid://bgbbce7y6v2br"
+path="res://.godot/imported/lightning rod.png-651031cacfb595092b2e146ec713842d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/fruit.png"
-dest_files=["res://.godot/imported/fruit.png-3735163b668af10c2b35b52cba81b68a.ctex"]
+source_file="res://assets/sprites/lightning rod.png"
+dest_files=["res://.godot/imported/lightning rod.png-651031cacfb595092b2e146ec713842d.ctex"]
 
 [params]
 
