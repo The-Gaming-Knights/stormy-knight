@@ -1,6 +1,5 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsvb2o8xljk22"]
+[gd_scene load_steps=5 format=3 uid="uid://dsvb2o8xljk22"]
 
-[ext_resource type="Script" path="res://scripts/carflip.gd" id="1_3ypim"]
 [ext_resource type="Texture2D" uid="uid://bxvd5sw2p4gpg" path="res://assets/sprites/cars/sci-fi E-spirit.png" id="1_yd47a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_let2u"]
@@ -26,7 +25,6 @@ animations = [{
 }]
 
 [node name="AnimatableBody2D" type="AnimatableBody2D"]
-script = ExtResource("1_3ypim")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 7

@@ -3,7 +3,7 @@ extends Node
 var level = 6
 var lastlevel = 6
 var skin = 1
-var cheese = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
+var cheese = [false,false,false,false,false,false]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
